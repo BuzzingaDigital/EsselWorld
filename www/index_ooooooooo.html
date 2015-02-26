@@ -1,0 +1,2405 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8">
+<meta property="og:title" content="EsselWorld Login" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://apps.facebook.com/mobile-start/" />
+<meta property="og:site_name" content="EsselWorld for Mobile Web" />
+<meta property="og:image" content="http://www.facebookmobileweb.com/hackbook/img/facebook_icon_large.png"/>
+<meta property="fb:admins" content="20901205" />
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="viewport" content="initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title>EsselWorld</title>
+<link href="fonts/css/font-awesome.css" rel="stylesheet">
+<link href="http://cdn.webrupee.com/font" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css/jquery.mobile-1.3.1.min.css">
+<link rel="stylesheet" href="css/style.css">
+<script type="text/javascript" src="phonegap.js"></script>
+<!-- <script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="cordova_plugins.js"></script> -->
+
+<script type="text/javascript" src="js/index.js"></script>
+<script src="cdv-plugin-fb-connect.js"></script>
+<script src="facebook-js-sdk.js"></script> 
+<script src="js/ui.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/feed.js"></script>
+<script src="js/graph_api.js"></script>
+<script src="js/requests.js"></script>
+<script type="text/javascript" src="js/iscroll.js"></script>
+<script src="js/jquery-1.9.1.min.js"></script>
+
+<!-- <script src="js/jquery.mobile.iscrollview.js" type="text/javascript"></script> -->
+<script type="text/javascript">
+function oncheck()
+{
+  var ref = window.open('https://www.esselworld.in/booking/', '_system', 'location=yes');
+}
+function oncheck1()
+{
+  var ref = window.open('https://www.facebook.com/esselworld/', '_system', 'location=yes');
+}
+</script>
+<script type="text/javascript">
+var myScroll;
+
+function loaded() {
+  myScroll = new iScroll('wrapper', {
+      snap: true,
+      momentum: false,
+      hScrollbar: false,
+      desktopCompatibility: true,
+      checkDOMChanges: true,
+      onScrollEnd: function () {
+          document.querySelector('#indicator > li.active').className = '';
+          document.querySelector('#indicator > li:nth-child(' + (this.currPageX+1) + ')').className = 'active';
+      }
+  });
+
+  myScroll = new iScroll('wrapper1', {
+      snap: true,
+      momentum: false,
+      hScrollbar: false,
+      desktopCompatibility: true,
+      checkDOMChanges: true,
+      onScrollEnd: function () {
+          document.querySelector('#indicator1 > li.active').className = '';
+          document.querySelector('#indicator1> li:nth-child(' + (this.currPageX+1) + ')').className = 'active';
+      }
+  });
+  
+  myScroll = new iScroll('wrapper2', {
+      snap: true,
+      momentum: false,
+      hScrollbar: false,
+      desktopCompatibility: true,
+      checkDOMChanges: true,
+      onScrollEnd: function () {
+          document.querySelector('#indicator2 > li.active').className = '';
+          document.querySelector('#indicator2 > li:nth-child(' + (this.currPageX+1) + ')').className = 'active';
+      }
+  });
+  
+  myScroll = new iScroll('wrapper3', {
+      snap: true,
+      momentum: false,
+      hScrollbar: false,
+      desktopCompatibility: true,
+      checkDOMChanges: true,
+      onScrollEnd: function () {
+          document.querySelector('#indicator3 > li.active').className = '';
+          document.querySelector('#indicator3 > li:nth-child(' + (this.currPageX+1) + ')').className = 'active';
+      }
+  });
+
+  myScroll = new iScroll('wrapperd', {
+      snap: true,
+      momentum: false,
+      hScrollbar: false,
+      desktopCompatibility: true,
+      checkDOMChanges: true,
+      onScrollEnd: function () {
+          document.querySelector('#indicator4 > li.active').className = '';
+          document.querySelector('#indicator4 > li:nth-child(' + (this.currPageX+1) + ')').className = 'active';
+      }
+  });
+  
+  myScroll = new iScroll('wrapperpaid', {
+      snap: true,
+      momentum: false,
+      hScrollbar: false,
+      desktopCompatibility: true,
+      checkDOMChanges: true,
+      onScrollEnd: function () {
+          document.querySelector('#indicator5 > li.active').className = '';
+          document.querySelector('#indicator5 > li:nth-child(' + (this.currPageX+1) + ')').className = 'active';
+      }
+  });
+  
+  myScroll = new iScroll('wrapperfaci', {
+      snap: true,
+      momentum: false,
+      hScrollbar: false,
+      desktopCompatibility: true,
+      checkDOMChanges: true,
+      onScrollEnd: function () {
+          document.querySelector('#indicator6 > li.active').className = '';
+          document.querySelector('#indicator6 > li:nth-child(' + (this.currPageX+1) + ')').className = 'active';
+      }
+  });
+   myScroll = new iScroll('wrapperfab', {
+      snap: true,
+      momentum: false,
+      hScrollbar: false,
+      desktopCompatibility: true,
+      checkDOMChanges: true,
+      onScrollEnd: function () {
+          document.querySelector('#indicatorfab > li.active').className = '';
+          document.querySelector('#indicatorfab > li:nth-child(' + (this.currPageX+1) + ')').className = 'active';
+      }
+  });
+
+ myScroll = new iScroll('wrappermer', {
+      snap: true,
+      momentum: false,
+      hScrollbar: false,
+      desktopCompatibility: true,
+      checkDOMChanges: true,
+      onScrollEnd: function () {
+          document.querySelector('#indicatormer > li.active').className = '';
+          document.querySelector('#indicatormer > li:nth-child(' + (this.currPageX+1) + ')').className = 'active';
+      }
+  });
+
+}
+document.addEventListener('DOMContentLoaded', loaded, true);
+
+function loadedb() 
+{
+ 
+  myScroll  = new iScroll('wrappermaind19',{
+                  zoom:true, 
+                  checkDOMChanges: true, 
+                  scrollY: true,
+                  bounce: false,
+                  hScrollbar: false,
+                  vScrollbar: false
+              });
+
+  myScroll  = new iScroll('wrappermaind4',{
+                  zoom:true, 
+                  checkDOMChanges: true, 
+                  scrollY: true,
+                  bounce: false,
+                  hScrollbar: false,
+                  vScrollbar: false
+              });
+
+  myScroll  = new iScroll('wrappermaind2',{
+                  zoom:true, 
+                  checkDOMChanges: true, 
+                  scrollY: true,
+                  bounce: false,
+                  hScrollbar: false,
+                  vScrollbar: false
+              });
+
+}
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+document.addEventListener('DOMContentLoaded', loadedb, false);
+
+function loadedkb() {
+
+  myScroll = new iScroll('wrappermap', { 
+        zoom:true, 
+        checkDOMChanges: true,
+		bounce:false
+  });
+ }
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+document.addEventListener('DOMContentLoaded', loadedkb, false);
+$(document).ready(function(e) {
+	$('area').on('click', function(event) {
+    	event.preventDefault();/*if we remove this line then the popup will open/hide immediately*/
+        var sel= $(this).attr('href');
+        $(sel).popup("open")
+    });
+});
+</script>
+<style type="text/css">
+.myScrollbarV {
+	position: absolute;
+	z-index: 100;
+	width: 8px;
+	bottom: 7px;
+	top: 2px;
+	right: 1px
+}
+.myScrollbarV > div {
+	position: absolute;
+	z-index: 100;
+	width: 100%;
+	/* The following is probably what you want to customize */
+	/*background: -webkit-gradient(linear, 0 0, 100% 0, from(#f00), to(#900));
+	background-image: -moz-linear-gradient(top, #f00, #900);
+	background-image: -o-linear-gradient(top, #f00, #900);
+	border: 1px solid #900;
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding-box;
+	-o-background-clip: padding-box;
+	background-clip: padding-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 1px 1px 0 rgba(255,255,255,0.5);
+	-moz-box-shadow: inset 1px 1px 0 rgba(255,255,255,0.5);
+	-o-box-shadow: inset 1px 1px 0 rgba(255,255,255,0.5);
+	box-shadow: inset 1px 1px 0 rgba(255,255,255,0.5);*/
+}
+</style>
+<!-- jQuery and jQuery Mobile -->
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/jquery.mobile-1.3.1.min.js"></script>
+<script type="text/javascript" src="js/fetchdata.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type='text/javascript' src='js/jquery.cookie.js'></script>
+<script type='text/javascript' src='js/jquery.dcjqaccordion.2.7.min.js'></script>
+<script language="javascript">
+$(document).ready(function($){
+  $('#accordion-1').dcAccordion({
+	  eventType: 'click',
+	  autoClose: true,
+	  saveState: true,
+	  disableLink: true,
+	  speed: 'slow',
+	  autoExpand: true,
+	  classExpand	 : true
+  });
+});
+</script>
+<script src="js/codiqa.ext.js"></script>
+<style type="text/css" media="all">
+#wrappermap {
+	position: absolute;
+	z-index: 1;
+	top: 45px;
+	bottom: 48px;
+	left: 0;
+	width: 100%;
+	background: #FFF;
+	overflow: auto;
+}
+#scrollermap {
+	position: absolute;
+	/*	-webkit-touch-callout:none;*/
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	width: 1779px;
+	padding: 0;
+	background: #fff;
+	cursor: all-scroll;
+}
+</style>
+</head>
+<body>
+<div id="fb-root"></div>
+<!--- Page1 Starts  -->
+<div data-role="page" id="page1" class="startpage"> 
+  <!--Page Content Starts-->
+  <div data-role="content">
+    <div class="logo"> <img src="images/logo.png" alt="Logo"/> </div>
+    <div class="starttxt"> <img src="images/main-text.png" alt="Text"/> </div>
+    
+     <div>
+      	<div class="show_when_not_connected">
+            <a onClick="promptLogin()" class="login-button"> 
+            	<img src="images/connect-fb.png" />
+        	</a>
+    	</div>
+    </div>
+    
+		
+        <div id="action">
+    		<div id="loading-icon"></div>
+    		<div id="msg"></div>
+  		</div>
+    	<div class="show_when_connected">
+        	<div id="welcome">
+            	<img id="user-picture" /><br />
+                <span id="user-name"></span>
+            </div>
+            <div id="login_button" class="button" onClick="logout()">Logout</div>
+      	</div>
+
+	 <div id="deviceready"></div>
+     <!-- <input type="image" src="images/connect-fb.png">-->
+    <br />
+    <div class="home-but"> <a href="#page2" data-transition="turn">
+      <input type="image" src="images/skip-but.png">
+      </a> </div>
+  </div>
+  <!--Page Content Starts--> 
+</div>
+<!--- Page1 Ends  --> 
+
+<!--- Page2 Starts  -->
+<div data-role="page" id="page2"  style="background-color:#000;background-image: linear-gradient(#000000,#000);"> 
+  
+  <!--Header Starts-->
+  <div data-theme="" data-role="header" data-position="fixed">
+    <div class="tophome">
+      <div class="col-xs-12 topbg"> <a href="#page1" data-transition="turn"> <img src="images/logo-1.png" alt="Logo"/> </a> </div>
+    </div>
+  </div>
+  <!--Header Ends--> 
+  
+  <!--Page Content Starts-->
+  <div data-role="content" style="background-color:#000;" class="home-page">
+    <div class="col-xs-12 nopadding">
+      <div class="outerwrapdkb">
+        <div class="box1"> <a href="#page29"><img src="images/home-img1.jpg"  alt="Image"/></a> </div>
+        <div class="box2"> <a href="#page3"><img src="images/home-img2.jpg"  alt="Image"/></a> </div>
+        <div class="clear"></div>
+      </div>
+      <div class="menupageouterd">
+        <div class="floatl boxes1">
+          <div class="box3"> <a href="#page8"><img src="images/home-img3.jpg"  alt="Image"/></a> </div>
+          <div class="box4"> <a href="#fabmain"><img src="images/home-img4.jpg"  alt="Image"/></a> </div>
+          <div class="box5"> <a href="#page21"><img src="images/home-img5.jpg"  alt="Image"/></a> </div>
+        </div>
+        <div class="floatl boxes2">
+          <div class="box6"> <a href="#page14"><img src="images/home-img6.jpg"  alt="Image"/></a> </div>
+          <div class="box7"> <a href="#page28"><img src="images/home-img7.jpg"  alt="Image"/></a> </div>
+        </div>
+      </div>
+      <!--<img src="images/home-fullimg.jpg"  alt="Image"/>--> 
+    </div>
+  </div>
+  <!--Page Content Ends--> 
+  
+  <!--Footer Starts-->
+  <div data-theme="a" data-role="footer" data-position="fixed"  style="background-color:#000;">
+    <div class="outerwrapdkb footerbg">
+      <div class="col-xs-2"> <a href="#" onclick="oncheck1();"><img src="images/footer-fb.png" alt="fb"/></a></div>
+      <div class="col-xs-10"><a href="#" onclick="oncheck();"><img src="images/footer-but.png" alt="Button"/></a></div>
+    </div>
+  </div>
+  <!--Footer Ends--> 
+</div>
+<!--- Page2 Ends  --> 
+
+<!--- Page3 Starts Events Page  -->
+<div data-role="page" id="page3"> 
+  
+  <!--Header Starts-->
+  <div data-theme="" data-role="header" data-position="fixed">
+    <div id="header" class="topinner"> <a href="#page2" data-transition="flip"> <span> <img src="images/icon3.png"  alt="background-icon"/> </span>
+      <h1>Events</h1>
+      </a> </div>
+    <div class="inner-logo"> <img src="images/logo-2.png"  alt="Logo"/> </div>
+  </div>
+  <!--Header Ends--> 
+  
+  <!--Page Content Starts-->
+  <div data-role="content" class="events-bg wrappermaindb">
+    <div class="disclaimer1"><strong>Disclaimer</strong> - <br /> Internet connection required to view the latest events.</div>
+    
+  </div>
+  <!--Page Content Starts--> 
+  
+  <!--Footer Starts-->
+  <div data-theme="a" data-role="footer" data-position="fixed">
+    <div class="col-xs-12 events-menu">
+        <ul id="listevents" data-role="listview"></ul>
+    </div>
+    <div class="outerwrapdkb footerbg">
+      <div class="col-xs-2"> <a href="#" onclick="oncheck1();"><img src="images/footer-fb.png" alt="fb"/></a></div>
+      <div class="col-xs-10"><a href="#" onclick="oncheck();"><img src="images/footer-but.png" alt="Button"/></a></div>
+    </div>
+  </div>
+  <!--Footer Ends--> 
+  
+</div>
+
+<!--- Page3 Ends Events Page  --> 
+
+<!--- Page4 Starts Events Sub Page 1  -->
+<div data-role="page" id="page4"> 
+  
+  <!--Header Starts-->
+  <div data-theme="" data-role="header" data-position="fixed">
+    <div id="header" class="topinner"> <a href="#page3" data-transition="flip"> <span> <img src="images/icon3.png"  alt="background-icon"/> </span>
+      <div id="eacheventsd"></div>
+      </a> </div>
+    <div class="inner-logo"> <img src="images/logo-2.png"  alt="Logo"/> </div>
+  </div>
+  <!--Header Ends--> 
+  
+  <!--Page Content Starts-->
+  <div data-role="content" id="wrappermaind19" class="wrappermaindb" style="top:2px;">
+    <div class="scrollermain" style="margin-top:0px !important;" id="dhabij">
+      <div class="col-xs-12 nopadding">
+        <div class="events">
+  			<div id="eachevents"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Page Content Starts--> 
+  
+  <!--Footer Starts-->
+  <div data-theme="a" data-role="footer" data-position="fixed">
+    <div class="outerwrapdkb footerbg">
+      <div class="col-xs-2"> <a href="#" onclick="oncheck1();"><img src="images/footer-fb.png" alt="fb"/></a></div>
+      <div class="col-xs-10"><a href="#" onclick="oncheck();"><img src="images/footer-but.png" alt="Button"/></a></div>
+    </div>
+  </div>
+  <!--Footer Ends--> 
+</div>
+<!--- Page4 Ends Events Sub Page 1  --> 
+
+<!--- Page5 Starts Events Sub Page 2  -->
+<div data-role="page" id="page5"> 
+  
+  <!--Header Starts-->
+  <div data-theme="" data-role="header" data-position="fixed">
+    <div id="header" class="topinner"> <a href="#page3" data-transition="flip"> <span> <img src="images/icon3.png"  alt="background-icon"/> </span>
+      <h1>Esselworld Christmas Carnival</h1>
+      </a> </div>
+    <div class="inner-logo"> <img src="images/logo-2.png"  alt="Logo"/> </div>
+  </div>
+  <!--Header Ends--> 
+  
+  <!--Page Content Starts-->
+  <div data-role="content">
+    <div class="col-xs-12 nopadding">
+      <div class="events">
+        <h1> Esselworld Christmas Carnival</h1>
+        <span>On 31st Dec. <strong>|</strong> 8pm onwards</span>
+        <p> <img src="images/event-img2.jpg"  alt=""/></p>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. </p>
+      </div>
+    </div>
+  </div>
+  <!--Page Content Starts--> 
+  
+  <!--Footer Starts-->
+  <div data-theme="a" data-role="footer" data-position="fixed">
+    <div class="outerwrapdkb footerbg">
+      <div class="col-xs-2"> <a href="#" onclick="oncheck1();"><img src="images/footer-fb.png" alt="fb"/></a></div>
+      <div class="col-xs-10"><a href="#" onclick="oncheck();"><img src="images/footer-but.png" alt="Button"/></a></div>
+    </div>
+  </div>
+  <!--Footer Ends--> 
+  
+</div>
+
+<!--- Page5 Ends Events Sub Page 2  --> 
+
+<!--- Page6 Starts Events Sub Page 3  -->
+<div data-role="page" id="page6"> 
+  
+  <!--Header Starts-->
+  <div data-theme="" data-role="header" data-position="fixed">
+    <div id="header" class="topinner"> <a href="#page3" data-transition="flip"> <span> <img src="images/icon3.png"  alt="background-icon"/> </span>
+      <h1>Esselworld’s 24th Anniversary</h1>
+      </a> </div>
+    <div class="inner-logo"> <img src="images/logo-2.png"  alt="Logo"/> </div>
+  </div>
+  <!--Header Ends--> 
+  
+  <!--Page Content Starts-->
+  <div data-role="content">
+    <div class="col-xs-12 nopadding">
+      <div class="events">
+        <h1>Esselworld’s 24th Anniversary</h1>
+        <span>On 31st Dec. <strong>|</strong> 8pm onwards</span>
+        <p> <img src="images/event-img3.jpg"  alt=""/></p>
+        <p>Meet and Greet the star-cast of Yaarian at Esselworld's Anniversary Celebrations, this 24th Dec. Be there<br />
+          Be a part of our celebration and double the enjoyment at you own "The all new island of fun" </p>
+      </div>
+    </div>
+  </div>
+  <!--Page Content Starts--> 
+  
+  <!--Footer Starts-->
+  <div data-theme="a" data-role="footer" data-position="fixed">
+    <div class="outerwrapdkb footerbg">
+      <div class="col-xs-2"> <a href="#" onclick="oncheck1();"><img src="images/footer-fb.png" alt="fb"/></a></div>
+      <div class="col-xs-10"><a href="#" onclick="oncheck();"><img src="images/footer-but.png" alt="Button"/></a></div>
+    </div>
+  </div>
+  <!--Footer Ends--> 
+</div>
+
+<!--- Page6 Ends Events Sub Page 3  --> 
+
+<!--- Page7 Starts Events Sub Page 4  -->
+<div data-role="page" id="page7"> 
+  <!--Header Starts-->
+  <div data-theme="" data-role="header" data-position="fixed">
+    <div id="header" class="topinner"> <a href="#page3" data-transition="flip"> <span> <img src="images/icon3.png"  alt="background-icon"/> </span>
+      <h1>Bignite</h1>
+      </a> </div>
+    <div class="inner-logo"> <img src="images/logo-2.png"  alt="Logo"/> </div>
+  </div>
+  <!--Header Ends--> 
+  
+  <!--Page Content Starts-->
+  <div data-role="content">
+    <div class="col-xs-12 nopadding">
+      <div class="events">
+        <h1>Bignite</h1>
+        <span>On 31st Dec. <strong>|</strong> 8pm onwards</span>
+        <p> <img src="images/bignite_640x960.jpg"  alt=""/></p>
+        <p>India's biggest New Year Bash with hip thumping music and laser shows at the biggest open-air dance floors - Party at the Pack!  Event subject to change without prior notice. </p>
+      </div>
+    </div>
+  </div>
+  <!--Page Content Starts--> 
+  
+  <!--Footer Starts-->
+  <div data-theme="a" data-role="footer" data-position="fixed">
+    <div class="disclaimer"><strong>Disclaimer</strong> - Event subject to change without prior notice</div>
+    <div class="outerwrapdkb footerbg">
+      <div class="col-xs-2"> <a href="#" onclick="oncheck1();"><img src="images/footer-fb.png" alt="fb"/></a></div>
+      <div class="col-xs-10"><a href="#" onclick="oncheck();"><img src="images/footer-but.png" alt="Button"/></a></div>
+    </div>
+  </div>
+  <!--Footer Ends--> 
+</div>
+
+<!--- Page7 Ends Events Sub Page 4  --> 
+
+<!--- fabmain Starts Rides Page  -->
+<div data-role="page" id="fabmain"> 
+  
+  <!--Header Starts-->
+  <div data-theme="" data-role="header" data-position="fixed">
+    <div id="header" class="topinner"> <a href="#page2" data-transition="flip"> <span> <img src="images/icon3.png"  alt="background-icon"/> </span>
+      <h1>FAB5 &amp; Merchandise</h1>
+      </a> </div>
+    <div class="inner-logo"> <img src="images/logo-2.png"  alt="Logo"/> </div>
+  </div>
+  <!--Header Ends--> 
+  
+  <!--Page Content Starts-->
+  <div data-role="content" class="fabmain-bg wrappermaindb" id="wrappermaind1">
+    <div class="scrollermain"> </div>
+  </div>
+  <!--Page Content Starts--> 
+  
+  <!--Footer Starts-->
+  <div data-theme="a" data-role="footer" data-position="fixed">
+    <div class="col-xs-12 menu menupage8">
+      <ul>
+        <li> <a href="#fab5" style="color: #383939 !important;"> FAB5<span><img src="images/icon4.png"  alt=""/></span> </a> </li>
+        <li> <a href="#Merchandise" style="color: #383939 !important;"> Merchandise<span><img src="images/icon4.png"  alt=""/></span> </a> </li>
+      </ul>
+    </div>
+    <div class="outerwrapdkb footerbg">
+      <div class="col-xs-2"> <a href="#" onclick="oncheck1();"><img src="images/footer-fb.png" alt="fb"/></a></div>
+      <div class="col-xs-10"><a href="#" onclick="oncheck();"><img src="images/footer-but.png" alt="Button"/></a></div>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <!--Footer Ends--> 
+  
+</div>
+
+<!--- fabmain Ends   --> 
+
+<!--- fab5 FAB5 &amp; Merchandise Sub Page 2  -->
+
+<div data-role="page" id="fab5">
+  <div data-theme="" data-role="header" data-position="fixed">
+    <div id="header" class="topinner"> <a href="#fabmain" data-transition="flip"> <span> <img src="images/icon3.png"  alt="background-icon"/> </span>
+      <h1>Fab5</h1>
+      </a> </div>
+    <div class="inner-logo"> <img src="images/logo-2.png"  alt="Logo"/> </div>
+  </div>
+  <div data-role="content">
+    <div class="col-xs-12">
+      <div class="events">
+        <div id="wrapperfab" class="test_dkb">
+          <div id="scrollerfab">
+            <ul id="thelist">
+              <li>
+                <h1> Andy</h1>
+                <p> <img src="Original/fab5/Andy.jpg"  alt=""/></p>
+                <p>The whizz-kid on the skateboard. This little lad is always up to something. Grooving in the shade of his blue idea hat while enjoying pineapple jam, icecream or chocolate he comes up with the most insane ideas! </p>
+              </li>
+              <li>
+                <h1>Mimi </h1>
+                <p> <img src="Original/fab5/Mimi.jpg"  alt=""/></p>
+                <p>This might be the cutest dear you might ever see. Some men might want to take her DNA and stem cell a human out of her. She has the most flattering eyes coupled with a gorgeous smile. She is always enthusiastic to try out new activities and rides at the park. </p>
+              </li>
+              <li>
+                <h1>Mithu</h1>
+                <p> <img src="Original/fab5/Mithu.jpg"  alt=""/></p>
+                <p> You can have a logical conversation or just see him flaunt his magic tricks. This parrot is bound to amaze you. The wisest of them all, he knows how to look after his himself & his friends. </p>
+              </li>
+              <li>
+                <h1>Mayoor</h1>
+                <p> <img src="Original/fab5/Peacock.jpg"  alt=""/></p>
+                <p>Mayoor the peacock is as rich and aristocratic as he looks. He is very particular about his dressing and conduct. Mayoor is a well read guy too. He is fond of dancing and is a sights for the gods to see, when de does. </p>
+              </li>
+              <li>
+                <h1> Riki </h1>
+                <p> <img src="Original/fab5/Riki.jpg"  alt=""/></p>
+                <p>If there was to be a paradox of a Rhino, it would have to be Ricky.The happy, fun loving two ton Rhino. This guy knows have to have good time, running in his Bermudas he will make the ground grumble and your mood tickle with some hilarious jokes. </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div data-theme="a" data-role="footer" data-position="fixed">
+    <div class="nav7">
+      <ul id="indicatorfab">
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+      </ul>
+    </div>
+    <div class="outerwrapdkb footerbg">
+      <div class="col-xs-2"> <a href="#" onclick="oncheck1();"><img src="images/footer-fb.png" alt="fb"/></a></div>
+      <div class="col-xs-10"><a href="#" onclick="oncheck();"><img src="images/footer-but.png" alt="Button"/></a></div>
+    </div>
+  </div>
+</div>
+
+<!--- fab5 FAB5 &amp; Merchandise Sub Page  --> 
+
+<!--- Merchandise FAB5 &amp; Merchandise Sub Page 2  -->
+
+<div data-role="page" id="Merchandise">
+  <div data-theme="" data-role="header" data-position="fixed">
+    <div id="header" class="topinner"> <a href="#fabmain" data-transition="flip"> <span> <img src="images/icon3.png"  alt="background-icon"/> </span>
+      <h1>Merchandise</h1>
+      </a> </div>
+    <div class="inner-logo"> <img src="images/logo-2.png"  alt="Logo"/> </div>
+  </div>
+  <div data-role="content">
+    <div class="col-xs-12">
+      <div class="events">
+        <div id="wrappermer" class="test_dkb">
+          <div id="scrollermer">
+            <ul id="thelist">
+              <li>
+                <h1> Cap Shap </h1>
+                <p> <img src="Original/Merchandise/Cap-Shop.jpg"  alt=""/></p>
+                <p>Nothing stops you from having a lot of fun at EsselWorld. Not even a hot day. Find the wacky hats at Cap Shap and keep enjoying. </p>
+                <div class="small-text">Location: Jetty Ticketing Plaza</div>
+              </li>
+              <li>
+                <h1>Witch Blood </h1>
+                <p> <img src="Original/Merchandise/Witch-Blood.jpg"  alt=""/></p>
+                <p>Every thing you need for your next Halloween party. If you love to spook your friends, do it right with scary masks, costumes and pranks. </p>
+                <div class="small-text"> Location: Next to Monsters in the Mist</div>
+              </li>
+              <!--<li>
+                <h1>Pastonji’s Ice-Cream Parlour</h1>
+                <p> <img src="Original/Merchandise/Pastonji-img.jpg"  alt=""/></p>
+                <p> The most common thing that everyone loves-  Ice-Cream! So Choco-chip or Vanilla?? </p>
+              </li>-->
+              <li>
+                <h1>Andy’s Mall</h1>
+                <p> <img src="Original/Merchandise/Andys-Mall.jpg"  alt=""/></p>
+                <p>Shop across a range of merchandise featuring EsselWorld's Fabulous 5 mascots. Buy all your souveniers at Andy's Mall. </p>
+                <div class="small-text"> Location: Opp. Arctic Circle</div>
+              </li>
+              <li>
+                <h1>Confusion</h1>
+                <p> <img src="Original/Merchandise/Confusion (640x326).jpg"  alt=""/></p>
+                <p> Caps, hats or t-shirts. Grab a souvenir at the Confusion store and make your visit to EsselWorld more memorable. </p>
+                <div class="small-text">Location: Opp. Thunder</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div data-theme="a" data-role="footer" data-position="fixed">
+    <div class="nav8">
+      <ul id="indicatormer">
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+      </ul>
+    </div>
+    <div class="outerwrapdkb footerbg">
+     <div class="col-xs-2"> <a href="#" onclick="oncheck1();"><img src="images/footer-fb.png" alt="fb"/></a></div>
+      <div class="col-xs-10"><a href="#" onclick="oncheck();"><img src="images/footer-but.png" alt="Button"/></a></div>
+    </div>
+  </div>
+</div>
+
+<!--- Merchandise FAB5 &amp; Merchandise Sub Page  --> 
+
+<!--- Page8 Starts Rides Page  -->
+<div data-role="page" id="page8"> 
+  
+  <!--Header Starts-->
+  <div data-theme="" data-role="header" data-position="fixed">
+    <div id="header" class="topinner"> <a href="#page2" data-transition="flip"> <span> <img src="images/icon3.png"  alt="background-icon"/> </span>
+      <h1>Attractions</h1>
+      </a> </div>
+    <div class="inner-logo"> <img src="images/logo-2.png"  alt="Logo"/> </div>
+  </div>
+  <!--Header Ends--> 
+  
+  <!--Page Content Starts-->
+  <div data-role="content" class="rides-bg wrappermaindb" id="wrappermaind1">
+    <div class="scrollermain"> </div>
+  </div>
+  <!--Page Content Starts--> 
+  
+  <!--Footer Starts-->
+  <div data-theme="a" data-role="footer" data-position="fixed">
+    <div class="col-xs-12 menu menupage8">
+      <ul>
+        <li> <a href="#page12" style="color: #383939 !important;"> New Rides <span><img src="images/icon4.png"  alt=""/></span> </a> </li>
+        <li> <a href="#page9" style="color: #383939 !important;"> Family Rides <span><img src="images/icon4.png"  alt=""/></span> </a> </li>
+        <li> <a href="#page10" style="color: #383939 !important;"> Adult (Hi-Thrill) Rides<span><img src="images/icon4.png"  alt=""/></span> </a> </li>
+        <li> <a href="#page11" style="color: #383939 !important;"> Children Rides <span><img src="images/icon4.png"  alt=""/></span> </a> </li>
+        <li> <a href="#PaidAttractions" style="color: #383939 !important;"> Paid Attractions <span><img src="images/icon4.png"  alt=""/></span> </a> </li>
+      </ul>
+    </div>
+    <div class="outerwrapdkb footerbg">
+      <div class="col-xs-2"> <a href="#" onclick="oncheck1();"><img src="images/footer-fb.png" alt="fb"/></a></div>
+      <div class="col-xs-10"><a href="#" onclick="oncheck();"><img src="images/footer-but.png" alt="Button"/></a></div>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <!--Footer Ends--> 
+  
+</div>
+
+<!--- Page8 Ends Rides Page  --> 
+
+<!--- Page9 Starts Rides Sub Page 1  -->
+<div data-role="page" id="page9"> 
+  <!--Header Starts-->
+  <div data-theme="" data-role="header" data-position="fixed">
+    <div id="header" class="topinner"> <a href="#page8" data-transition="flip"> <span> <img src="images/icon3.png"  alt="background-icon"/> </span>
+      <h1>Family Rides</h1>
+      </a> </div>
+    <div class="inner-logo"> <img src="images/logo-2.png"  alt="Logo"/> </div>
+  </div>
+  <!--Header Ends--> 
+  
+  <!--Page Content Starts-->
+  <div data-role="content">
+    <div class="col-xs-12">
+      <div class="events">
+        <div id="wrapper"  class="test_dkb">
+          <div id="scroller1">
+            <ul id="thelist">
+              <li>
+                <h1> <div class="newicon"> <img src="images/new-icon.png"  alt=""/></div>Monsters in The Mist </h1>
+                <p> <img src="Original/FamilyRides/Monster_family.jpg"  alt=""/></p>
+                <p>Confront your ghostly fears at the nail biting house of fears.</p>
+              </li>
+              <li>
+                <h1><div class="newicon"> <img src="images/new-icon.png"  alt=""/></div>Copper Chopper </h1>
+                <p><img src="Original/FamilyRides/Copper-Chopper_640x960.jpg"  alt=""/></p>
+                <p>Go for a helicopter ride with your family and friends to enjoy the awesome view of our park. </p>
+              </li>
+              <li>
+                <h1> Aero Swinger </h1>
+                <p><img src="Original/FamilyRides/Aero-Swinger-Large.jpg"  alt=""/></p>
+                <p>The Aero Swinger gives you the feeling of sitting on a flying chair. Feel the wind blow through your hair!</p>
+              </li>
+              <li>
+                <h1>Aqua Dive </h1>
+                <p><img src="Original/FamilyRides/Aqua-dive.jpg"  alt=""/></p>
+                <p> This watery rush will leave you quenching for more. Aqua Dive combines maximum thrills as you dive into water leaving you drenched with fun! </p>
+              </li>
+              <li>
+                <h1> Crazy Cups </h1>
+                <p><img src="Original/FamilyRides/Crazy-Cups.jpg"  alt=""/></p>
+                <p> Crazy Cups Get seated and be ready for a stirring family ride - crazy cups guarantees loads of fun, thrills and impulsive giggles. </p>
+              </li>
+              <li>
+                <h1>Hedge Maze </h1>
+                <p><img src="Original/FamilyRides/Hedge-Maze-Large.jpg"  alt=""/></p>
+                <p> Lose yourself in the Hedge Maze. Find your way out of this fun maze made up of green plants.</p>
+              </li>
+              <li>
+                <h1> Highway Cars </h1>
+                <p><img src="Original/FamilyRides/Highway-Cars.jpg"  alt=""/></p>
+                <p>Buckle up, recline and enjoy the view while you cruise down the super highway. </p>
+              </li>
+              <li>
+                <h1> Mirror Maze </h1>
+                <p> <img src="Original/FamilyRides/Mirror-Maze-Large.jpg"  alt=""/></p>
+                <p>Enter this maze and be ready to see yourself in a whole new perspective - literally. The mirage will leave you giggling as you find your way out of this maze. </p>
+              </li>
+              <li>
+                <h1> Monster </h1>
+                <p><img src="Original/FamilyRides/Monster-640x960.jpg"  alt=""/></p>
+                <p>The Monster holds you in its tentacles, throwing and flipping you up in the air. It's scary but fun. </p>
+              </li>
+              <li>
+                <h1> Prabal The Killer </h1>
+                <p> <img src="Original/FamilyRides/Prabal-Large.jpg"  alt=""/></p>
+                <p>Once upon a time it struck fear in the hearts of the enemy. Explore the secrets of this powerful Indian Navy Destroyer at EsselWorld. </p>
+              </li>
+              <li>
+                <h1> Robot </h1>
+                <p> <img src="Original/FamilyRides/Robot-Large.jpg"  alt=""/></p>
+                <p> Let our Robot give you a glimpse of the future. Have a chat with our interactive robot. Get the future perspective. </p>
+              </li>
+              <!-- <li>
+              <h1> Rikki's Rocking Alley- Dance </h1>
+              <p> <img src="Original/FamilyRides/RikkiesBowlingAlley.jpg"  alt=""/></p>
+              <p> Hit the dance floor at EsselWorld. Show off your moves and groove to the beats. </p>
+            </li>
+            <li>
+              <h1> Tilt-A-Whirl </h1>
+              <p> <img src="Original/FamilyRides/Twilt-a-Whril.jpg"  alt=""/></p>
+              <p>A tilt to the left, a dash to the right and some groovy spins. Say 'Woohooo' and get on board. </p>
+            </li>
+            <li>
+              <h1> Zipper Dipper </h1>
+              <p> <img src="Original/FamilyRides/Zipper-Dipper.jpg"  alt=""/></p>
+              <p> Hop on the zipper-dipper, a fun ride for the entire family with some curvy turns and ups & downs. Live it up with your family on this wooden roller coaster. </p>
+            </li>
+            -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Page Content Starts--> 
+  
+  <!--Footer Starts-->
+  <div data-theme="a" data-role="footer" data-position="fixed">
+    <div class="nav">
+      <ul id="indicator">
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+      </ul>
+    </div>
+    <div class="outerwrapdkb footerbg">
+      <div class="col-xs-2"> <a href="#" onclick="oncheck1();"><img src="images/footer-fb.png" alt="fb"/></a></div>
+      <div class="col-xs-10"><a href="#" onclick="oncheck();"><img src="images/footer-but.png" alt="Button"/></a></div>
+    </div>
+  </div>
+  <!--Footer Ends--> 
+  
+</div>
+
+<!--- Page9 Ends Rides Sub Page 1  --> 
+
+<!--- Page10 Starts Rides Sub Page 2  -->
+<div data-role="page" id="page10"> 
+  
+  <!--Header Starts-->
+  <div data-theme="" data-role="header" data-position="fixed">
+    <div id="header" class="topinner"> <a href="#page8" data-transition="flip"> <span> <img src="images/icon3.png"  alt="background-icon"/> </span>
+      <h1>Adult (Hi-Thrill) Rides</h1>
+      </a> </div>
+    <div class="inner-logo"> <img src="images/logo-2.png"  alt="Logo"/> </div>
+  </div>
+  <!--Header Ends--> 
+  
+  <!--Page Content Starts-->
+  <div data-role="content">
+    <div class="col-xs-12">
+      <div class="events">
+        <div id="wrapper1" class="test_dkb">
+          <div id="scroller2">
+            <ul id="thelist">
+              <li>
+                <h1>
+                  <div class="newicon"> <img src="images/new-icon.png"  alt=""/></div>
+                  Top Spin </h1>
+                <p><img src="Original/AdultRides/topSpin.jpg"  alt=""/></p>
+                <p> Up is down! Top-Spin will flip you over and over again. Well, in short it would be the most rib ticking and intestine turning ride. It’s the latest International Thriller. </p>
+              </li>
+              <li>
+                <h1>
+                  <div class="newicon"> <img src="images/new-icon.png"  alt=""/></div>
+                  Shot-N-Drop </h1>
+                <p><img src="Original/AdultRides/shot-n-drop.jpg"  alt=""/></p>
+                <p> India's Tallest Tower ride! Get sky-shot at 4G force to 190 feet. And then fall free bungy style. Uparrrr...Neeche! In short, ab SAB KI FATEGI! </p>
+              </li>
+              <li>
+                <h1>Enterprise </h1>
+                <p> <img src="Original/AdultRides/Enterprise.jpg"  alt=""/></p>
+                <p> Enterprise is a thrilling combination of dizzy heights and scary speeds. You will get the feeling of sitting on a wheel of a giant bicycle. </p>
+              </li>
+              <li>
+                <h1>Hoola Loop </h1>
+                <p> <img src="Original/AdultRides/Hoola-Loop.jpg"  alt=""/></p>
+                <p> A roller coaster with insane drops & a 360 degree scoop. All at an express speed of 100 kms per hour. </p>
+              </li>
+              <li>
+                <h1>Rainbow </h1>
+                <p><img src="Original/AdultRides/Rainbow.jpg"  alt=""/></p>
+                <p>Experience weightlessness while you glide past the sun across the sky cruising on a rainbow. Catch a bird’s eye view of the whole park. </p>
+              </li>
+              <li>
+                <h1>Slam Bob </h1>
+                <p><img src="Original/AdultRides/Slam-Bob.jpg"  alt=""/></p>
+                <p> The ride will remind you of  the laws of circular motion. It's like riding a flying car at high speeds. </p>
+              </li>
+              <li>
+                <h1>Slippery Sultan </h1>
+                <p><img src="Original/AdultRides/Slippery-Sultan-Large.jpg"  alt=""/></p>
+                <p> A 75 feet high steep ride. You will love to slip and fall on the Slippery Sultan. </p>
+              </li>
+              <li>
+                <h1> Sr. Dodgem </h1>
+                <p><img src="Original/AdultRides/Sr-Dodgem.jpg"  alt=""/></p>
+                <p> There are no traffic lights and traffic rules at Senior Dodgem. Crash into one another and enjoy. </p>
+              </li>
+              <li>
+                <h1> Sr. Telecombat </h1>
+                <p> <img src="Original/AdultRides/telecombat_640x960.jpg"  alt=""/></p>
+                <p> Fly the Telecombat, twist and turn to avoid the oncoming air traffic and reach headquarters safely. Pilots, are you ready for the flight? </p>
+              </li>
+              <!--<li>
+              <h1> Thunder </h1>
+              <p> <img src="Original/AdultRides/Thunder.jpg"  alt=""/></p>
+              <p> The name itself brings a wicked smile on a thrill seeker's face. Thunder is a mixture of scary heights and speed, swinging up and down to make a circle. </p>
+            </li>
+            <li>
+              <h1>Zyclone </h1>
+              <p> <img src="Original/AdultRides/Zyclone.jpg"  alt=""/></p>
+              <p> Experience the twists and turns of the Zyclone like you're driving through a cyclone. Try and don't fly away. Hop in and tremble out. </p>
+            </li>
+            -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Page Content Starts--> 
+  
+  <!--Footer Starts-->
+  <div data-theme="a" data-role="footer" data-position="fixed">
+    <div class="nav1">
+      <ul id="indicator1">
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+      </ul>
+    </div>
+    <div class="outerwrapdkb footerbg">
+      <div class="col-xs-2"> <a href="#" onclick="oncheck1();"><img src="images/footer-fb.png" alt="fb"/></a></div>
+      <div class="col-xs-10"><a href="#" onclick="oncheck();"><img src="images/footer-but.png" alt="Button"/></a></div>
+    </div>
+  </div>
+  <!--Footer Ends--> 
+  
+</div>
+
+<!--- Page10 Ends Rides Sub Page 2  --> 
+
+<!--- Page11 Starts Rides Sub Page 2  -->
+<div data-role="page" id="page11"> 
+  
+  <!--Header Starts-->
+  <div data-theme="" data-role="header" data-position="fixed">
+    <div id="header" class="topinner"> <a href="#page8" data-transition="flip"> <span> <img src="images/icon3.png"  alt="background-icon"/> </span>
+      <h1>Children Rides</h1>
+      </a> </div>
+    <div class="inner-logo"> <img src="images/logo-2.png"  alt="Logo"/> </div>
+  </div>
+  <!--Header Ends--> 
+  
+  <!--Page Content Starts-->
+  <div data-role="content">
+    <div class="col-xs-12">
+      <div class="events">
+        <div id="wrapper2" class="test_dkb">
+          <div id="scroller3">
+            <ul id="thelist">
+              <li>
+                <h1>
+                  <div class="newicon"> <img src="images/new-icon.png"  alt=""/></div>
+                  Kangaroo Hop </h1>
+                <p> <img src="Original/ChildrenRides/Kangaroo-Hop-Kid.jpg"  alt=""/></p>
+                <p> This Kangaroo never gets tired and you can keep hop-hopping to a height of 20 feet with your kid-gang. </p>
+              </li>
+              <li>
+                <h1> Big-Apple</h1>
+                <p> <img src="Original/ChildrenRides/Big-Apple-Large.jpg"  alt=""/></p>
+                <p> A swirling and twirling experience for the young. This wacky roller coaster takes you through a giant apple. </p>
+              </li>
+              <li>
+                <h1> Children's Boat Ride </h1>
+                <p> <img src="Original/ChildrenRides/Boat-Ride-Large.jpg"  alt=""/></p>
+                <p> A fun-adventure boat ride for kids to bring out the explorers in them. </p>
+              </li>
+              <li>
+                <h1> Caterpillar</h1>
+                <p> <img src="Original/ChildrenRides/Caterpillar-Large.jpg"  alt=""/></p>
+                <p> This ride is a favorite with the kids at the park. They will feel butterflies in their stomach but they will laugh too. </p>
+              </li>
+              <li>
+                <h1> Jr. Dodgem</h1>
+                <p> <img src="Original/ChildrenRides/Jr-Dodgem-Large.jpg"  alt=""/></p>
+                <p> A favourite with kids, this ride violates all the traffic rules possible but in a controlled fun environment</p>
+              </li>
+              <li>
+                <h1> Happy Sky</h1>
+                <p> <img src="Original/ChildrenRides/Happy-Sky-Large.jpg"  alt=""/></p>
+                <p> The experience of travelling through the clouds, smiling at the twinkling stars and the cheerful Moon.  A truly beautiful and fun ride.</p>
+              </li>
+              <li>
+                <h1> Carousel </h1>
+                <p> <img src="Original/ChildrenRides/Kinder-Carousel.jpg"  alt=""/></p>
+                <p> The Carousel will bring back your childhood memories and will leave your kids with new ones that will last forever. </p>
+              </li>
+              <li>
+                <h1> Kiddies Flume</h1>
+                <p> <img src="Original/ChildrenRides/Kiddes-Flume.jpg"  alt=""/></p>
+                <p> Send your little ones out on a voyage and see them set sail to good times. </p>
+              </li>
+              <li>
+                <h1> Play Port</h1>
+                <p> <img src="Original/ChildrenRides/Play-Port-Large.jpg"  alt=""/></p>
+                <p> Fun filled workout, gymnastics and all kinds of physical activities for your growing toddler. </p>
+              </li>
+              <li>
+                <h1> Rio Grande Train</h1>
+                <p> <img src="Original/ChildrenRides/Rio-Grande-Train-Large.jpg"  alt=""/></p>
+                <p> A vibrant train gliding through a valley which gives a feeling of surprise and adventure to the kids. </p>
+              </li>
+              <li>
+                <h1> Yard Train</h1>
+                <p> <img src="Original/ChildrenRides/Yard-Train-Large.jpg"  alt=""/></p>
+                <p> A typical 'choo choo' train riding through the forest. Six small wagons pulled by a cute little steam engine. Kids will love it. </p>
+              </li>
+              <li>
+                <h1> Kinder Carousel</h1>
+                <p> <img src="Original/ChildrenRides/Kinder-Carousel.jpg"  alt=""/></p>
+                <p> A happy ride for the kids. Fun safari with soft nursery rhymes playing throughout the journey. </p>
+              </li>
+              <li>
+                <h1> Carousel </h1>
+                <p> <img src="Original/ChildrenRides/Kinder-Carousel.jpg"  alt=""/></p>
+                <p> The Carousel will bring back your childhood memories and will leave your kids with new ones that will last forever. </p>
+              </li>
+              <li>
+                <h1> Caterpillar</h1>
+                <p> <img src="Original/ChildrenRides/Caterpillar-Large.jpg"  alt=""/></p>
+                <p> This ride is a favorite with the kids at the park. They will feel butterflies in their stomach but they will laugh too. </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Page Content Starts--> 
+  
+  <!--Footer Starts-->
+  <div data-theme="a" data-role="footer" data-position="fixed">
+    <div class="nav2">
+      <ul id="indicator2">
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+      </ul>
+    </div>
+    <div class="outerwrapdkb footerbg">
+      <div class="col-xs-2"> <a href="#" onclick="oncheck1();"><img src="images/footer-fb.png" alt="fb"/></a></div>
+      <div class="col-xs-10"><a href="#" onclick="oncheck();"><img src="images/footer-but.png" alt="Button"/></a></div>
+    </div>
+  </div>
+  <!--Footer Ends--> 
+  
+</div>
+
+<!--- Page11 Ends Rides Sub Page 3  --> 
+
+<!--- Page12 Starts Rides Sub Page 4  -->
+<div data-role="page" id="page12"> 
+  
+  <!--Header Starts-->
+  <div data-theme="" data-role="header" data-position="fixed">
+    <div id="header" class="topinner"> <a href="#page8" data-transition="flip"> <span> <img src="images/icon3.png"  alt="background-icon"/> </span>
+      <h1>New Rides</h1>
+      </a> </div>
+    <div class="inner-logo"> <img src="images/logo-2.png"  alt="Logo"/> </div>
+  </div>
+  <!--Header Ends--> 
+  
+  <!--Page Content Starts-->
+  <div data-role="content">
+    <div class="col-xs-12">
+      <div class="events">
+        <div id="wrapper3" class="test_dkb">
+          <div id="scroller4">
+            <ul id="thelist">
+              <li>
+                <h1>
+                  <div class="newicon"> <img src="images/new-icon.png"  alt=""/></div>
+                  Top Spin </h1>
+                <p> <img src="Original/AdultRides/topSpin.jpg"  alt=""/></p>
+                <p> Up is down! Top-Spin will flip you over and over again. Well, in short it would be the most rib ticking and intestine turning ride. It’s the latest International Thriller. </p>
+              </li>
+              <li>
+                <h1>
+                  <div class="newicon"> <img src="images/new-icon.png"  alt=""/></div>
+                  Shot-N-Drop </h1>
+                <p> <img src="Original/NewRides/shot-n-drop.jpg"  alt=""/></p>
+                <p> India's Tallest Tower ride! Get sky-shot at 4G force to 190 feet. And then fall free bungy style. Uparrrr...Neeche! In short, ab SAB KI FATEGI! </p>
+              </li>
+              <li>
+                <h1>
+                  <div class="newicon"> <img src="images/new-icon.png"  alt=""/></div>
+                  Monsters in The Mist </h1>
+                <p> <img src="Original/FamilyRides/Monster_family.jpg"  alt=""/></p>
+                <p>Confront your ghostly fears at the nail biting house of fears.</p>
+              </li>
+              <li>
+                <h1>
+                  <div class="newicon"> <img src="images/new-icon.png"  alt=""/></div>
+                  Copper Chopper </h1>
+                <p> <img src="Original/FamilyRides/Copper-Chopper_640x960.jpg"  alt=""/></p>
+                <p> Go for a helicopter ride with your family and friends to enjoy the awesome view of our park. </p>
+              </li>
+              <li>
+                <h1>
+                  <div class="newicon"> <img src="images/new-icon.png"  alt=""/></div>
+                  Kangaroo Hop </h1>
+                <p> <img src="Original/NewRides/Kangaroo-Hop-Kid.jpg"  alt=""/></p>
+                <p>This Kangaroo never gets tired and you can keep hop-hopping to a height of 20 feet with your kid-gang. </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Page Content Starts--> 
+  
+  <!--Footer Starts-->
+  <div data-theme="a" data-role="footer" data-position="fixed">
+    <div class="nav3">
+      <ul id="indicator3">
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+      </ul>
+    </div>
+    <div class="outerwrapdkb footerbg">
+      <div class="col-xs-2"> <a href="#" onclick="oncheck1();"><img src="images/footer-fb.png" alt="fb"/></a></div>
+      <div class="col-xs-10"><a href="#" onclick="oncheck();"><img src="images/footer-but.png" alt="Button"/></a></div>
+    </div>
+  </div>
+  <!--Footer Ends--> 
+  
+</div>
+
+<!--- Page12 Ends Rides Sub Page 4  --> 
+
+<!--- Paid Attractions  Starts Restaurants Page  -->
+<div data-role="page" id="PaidAttractions"> 
+  <!--Header Starts-->
+  <div data-theme="" data-role="header" data-position="fixed">
+    <div id="header" class="topinner"> <a href="#page8" data-transition="flip"> <span> <img src="images/icon3.png"  alt="background-icon"/> </span>
+      <h1>Paid Attractions </h1>
+      </a> </div>
+    <div class="inner-logo"> <img src="images/logo-2.png"  alt="Logo"/> </div>
+  </div>
+  <!--Header Ends--> 
+  
+  <!--Page Content Starts-->
+  <div data-role="content">
+    <div class="col-xs-12">
+      <div class="events">
+        <div id="wrapperpaid" class="test_dkb">
+          <div id="scroller5">
+            <ul id="thelist">
+              <li>
+                <h1>Arctic Circle</h1>
+                <p> <img src="Original/PaidAttractions/icerink.jpg"  alt=""/></p>
+                <p>It snows all round the year at EsselWorld! Put on your skating shoes and glide through India's first ice-skating rink spread across 4,000 sq.ft. </p>
+              </li>
+              <li>
+                <h1> Lazer Tag </h1>
+                <p> <img src="Original/PaidAttractions/lasertag.jpg"  alt=""/></p>
+                <p> A fun game where you and your friends split into two teams and battle with laser guns! Two simple missions- Mission 1: Tag the enemy. Mission 2: Take over their base. "Over and Out!"</p>
+              </li>
+              <li>
+                <h1>Rikki's Rocking Alley</h1>
+                <p> <img src="Original/PaidAttractions/RikkiesBowlingAlley.jpg"  alt=""/></p>
+                <p>Put on your bowling shoes, stretch your fingers and be prepared for a gala time at a decked up six lane bowling alley. Can you strike out all ten? </p>
+              </li>
+              <li>
+                <h1>7D Theatre </h1>
+                <p> <img src="Original/PaidAttractions/7D.jpg"  alt=""/></p>
+                <p>Discover the new dimensions of virtual reality. A whole new movie watching experience with super effects.! </p>
+              </li>
+              <li>
+                <h1> Bouncy Ride </h1>
+                <p> <img src="Original/PaidAttractions/Bouncy-Ride.jpg"  alt=""/></p>
+                <p> This one is for the littile ones, they absolutely love bouncing about in this special castle just for them. </p>
+              </li>
+              <li>
+                <h1> Bull Tosser </h1>
+                <p> <img src="Original/PaidAttractions/BullTosser.jpg"  alt=""/></p>
+                <p> Unlike other rides, this ride will try and toss you out. How long can you ride the bull - rodeo style? </p>
+              </li>
+              <li>
+                <h1>Commando bridge & Free Fall</h1>
+                <p> <img src="Original/PaidAttractions/Commando-bridge-&-Free-Fall.jpg"  alt=""/></p>
+                <p> Saavdhaan! Vishraam! Jawaan will now climb the commando bridge and have a killer time. Race your pals to the top and then drop in the Free Fall. </p>
+              </li>
+              <li>
+                <h1>Crazy Shuttle </h1>
+                <p> <img src="Original/PaidAttractions/crazy-shuttle.jpg"  alt=""/></p>
+                <p> Hop in the shuttle and go on a short trip to the moon. Glide through the space and feel like an astronaut.</p>
+              </li>
+              <li>
+                <h1> Cricket Zone </h1>
+                <p> <img src="Original/PaidAttractions/CricketZone.jpg"  alt=""/></p>
+                <p> Test your batting skills against our bowling machine. Practice your cover drive or go all the way for a sixer! </p>
+              </li>
+              <li>
+                <h1> Derby Racer </h1>
+                <p> <img src="Original/PaidAttractions/DerbyRacer_Facade.jpg"  alt=""/></p>
+                <p> Get the derby experience, EsselWorld Style! </p>
+              </li>
+              <li>
+                <h1> Riki's Safari </h1>
+                <p> <img src="Original/PaidAttractions/RikkiesBowlingAlley.jpg"  alt=""/></p>
+                <p> Ride through the park with Riki our very own guide. He will make sure you have a great time discovering Esselworld. </p>
+              </li>
+              <li>
+                <h1> Rock Climbing </h1>
+                <p> <img src="Original/PaidAttractions/RockClimbing.jpg"  alt=""/></p>
+                <p> The most adventurous sport only at EsselWorld. Lets see how fast can you climb. Are you up for the challenge? </p>
+              </li>
+              <li>
+                <h1> Trampoline</h1>
+                <p> <img src="Original/PaidAttractions/Trampoline.jpg"  alt=""/></p>
+                <p> Get strung between 2 really large rubber bands and bounce about. Hop, skip and drop- the trampoline is a fund breather between the big rides.</p>
+              </li>
+              <li>
+                <h1>Virtual World </h1>
+                <p> <img src="Original/Facilities&Services/Virtual-World.jpg"  alt=""/></p>
+                <p>The gaming hot spot at EsselWorld. If you are a gamer this is your world. </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Page Content Starts--> 
+  
+  <!--Footer Starts-->
+  <div data-theme="a" data-role="footer" data-position="fixed">
+    <div class="nav6">
+      <ul id="indicator5">
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+      </ul>
+    </div>
+    <div class="outerwrapdkb footerbg">
+      <div class="col-xs-2"> <a href="#" onclick="oncheck1();"><img src="images/footer-fb.png" alt="fb"/></a></div>
+      <div class="col-xs-10"><a href="#" onclick="oncheck();"><img src="images/footer-but.png" alt="Button"/></a></div>
+    </div>
+  </div>
+  <!--Footer Ends--> 
+</div>
+<!--- Paid Attractions  Ends Restaurants Page  --> 
+
+<!--- Page13 Starts Park and Ferry Timings  --> 
+<!--<div data-role="page" id="page13"> 
+  
+  <div data-theme="" data-role="header" data-position="fixed">
+    <div id="header" class="topinner"> <a href="#page2" data-transition="flip"> <span> <img src="images/icon3.png"  alt="background-icon"/> </span>
+      <h1>Park & Ferry Timing</h1>
+      </a> </div>
+    <div class="inner-logo"> <img src="images/logo-2.png"  alt="Logo"/> </div>
+  </div>
+
+  <div data-role="content" class="timing wrappermaindb" id="wrappermaind2">
+    <div class="scrollermain"> </div>
+  </div>
+
+  <div data-theme="a" data-role="footer" data-position="fixed">
+    <div class="col-xs-12">
+      <div class="matter">
+        <h1> Park Timing</h1>
+        <ul>
+          <li>Week Days <span>10am <strong>to</strong> 7pm</span></li>
+          <li>Weekends/ Holidays <span>10am <strong>to</strong> 7pm</span></li>
+          <li>Season Days <span>10am <strong>to</strong> 8pm</span></li>
+        </ul>
+        <hr>
+        <h1>Ferry Timing</h1>
+        <p> Every <span>15 mins </span>from Gorai jetty (Borivili) and every <span>45 mins </span>from Marve (Malad). Ferry charges: <strong class="WebRupee">Rs.</strong> <strong>50</strong> per head to & fro. </p>
+      </div>
+    </div>
+    <div class="outerwrapdkb footerbg">
+      <div class="col-xs-2"> <a href="https://www.facebook.com/esselworld"><img src="images/footer-fb.png" alt="fb"/></a> </div>
+      <div class="col-xs-10"> <a href="#"> <img src="images/footer-but.png" alt="Button"/></a> </div>
+    </div>
+  </div>
+  
+</div>-->
+<div data-role="page" id="page13"> 
+  <!--Header Starts-->
+  <div data-theme="" data-role="header" data-position="fixed">
+    <div id="header" class="topinner"> <a href="#page14" data-transition="flip"> <span> <img src="images/icon3.png"  alt="background-icon"/> </span>
+      <h1>Hours</h1>
+      </a> </div>
+    <div class="inner-logo"> <img src="images/logo-2.png"  alt="Logo"/> </div>
+  </div>
+  <!--Header Ends--> 
+  
+  <!--Page Content Starts-->
+  <div data-role="content" class="timing wrappermaindb">
+    <div class="scrollermain"> </div>
+  </div>
+  <!--Page Content Starts--> 
+  
+  <!--Footer Starts-->
+  <div data-theme="a" data-role="footer" data-position="fixed">
+    <div class="col-xs-12">
+      <div class="matter">
+        <h1> Park Timings</h1>
+        <ul>
+          <li>Regular Days <span>10am <strong>to</strong> 7pm</span></li>
+          <li>Season Days <span>10am <strong>to</strong> 8pm</span></li>
+          <!--<li>Week Days <span>10am <strong>to</strong> 7pm</span></li>
+          <li>Weekends/ Holidays <span>10am <strong>to</strong> 8pm</span></li>
+          <li>Season Days <span>10am <strong>to</strong> 8pm</span></li>-->
+        </ul>
+        <hr>
+        <h1>Ferry Timings</h1>
+        <p> Every <span>15 mins </span>from Gorai jetty (Borivili) and every <span>45 mins </span>from Marve (Malad). Ferry charges: <strong class="WebRupee">Rs.</strong> <strong>50 </strong>per head to & fro.</p>
+      </div>
+      <div class="disclaimer"><strong>Disclaimer</strong> - *Timings subject to change without prior notice</div>
+    </div>
+    <div class="outerwrapdkb footerbg">
+      <div class="col-xs-2"> <a href="#" onclick="oncheck1();"><img src="images/footer-fb.png" alt="fb"/></a></div>
+      <div class="col-xs-10"><a href="#" onclick="oncheck();"><img src="images/footer-but.png" alt="Button"/></a></div>
+    </div>
+  </div>
+  <!--Footer Ends--> 
+  
+</div>
+<!--- Page13 Ends Park and Ferry Timings  --> 
+
+<!--- Page14 Starts Trip Planning Page  -->
+<div data-role="page" id="page14" class="innerpages"> 
+  
+  <!--Header Starts-->
+  <div data-theme="" data-role="header" data-position="fixed">
+    <div id="header" class="topinner"> <a href="#page2" data-transition="flip"> <span> <img src="images/icon3.png"  alt="background-icon"/> </span>
+      <h1>Hours, Rates &amp; Directions</h1>
+      </a> </div>
+    <div class="inner-logo"> <img src="images/logo-2.png"  alt="Logo"/> </div>
+  </div>
+  <!--Header Ends--> 
+  
+  <!--Page Content Starts-->
+  <div data-role="content" class="trip-planning1 wrappermaindb" id="wrappermaind3" >
+    <div class="scrollermain"> </div>
+  </div>
+  <!--Page Content Starts--> 
+  
+  <!--Footer Starts-->
+  <div data-theme="a" data-role="footer" data-position="fixed">
+    <div class="col-xs-12 menu">
+      <ul>
+        <li> <a href="#page15" style="color: #383939 !important;"> Entry Rates <span><img src="images/icon4.png"  alt=""/></span> </a> </li>
+        <li> <a href="#page17" style="color: #383939 !important;"> How to Reach <span><img src="images/icon4.png"  alt=""/></span> </a> </li>
+        <li> <a href="#page13" style="color: #383939 !important;"> Hours<span><img src="images/icon4.png"  alt=""/></span> </a> </li>
+        
+        <!-- <li> <a href="#page16" style="color: #383939 !important;"> FAQ <span><img src="images/icon4.png"  alt=""/></span> </a> </li>-->
+      </ul>
+    </div>
+    <div class="outerwrapdkb footerbg">
+      <div class="col-xs-2"> <a href="#" onclick="oncheck1();"><img src="images/footer-fb.png" alt="fb"/></a></div>
+      <div class="col-xs-10"><a href="#" onclick="oncheck();"><img src="images/footer-but.png" alt="Button"/></a></div>
+    </div>
+  </div>
+  <!--Footer Ends--> 
+  
+</div>
+
+<!--- Page14 Ends Trip Planning Page  --> 
+
+<!--- Page15 Starts Trip Planning Sub Pages 1  -->
+<div data-role="page" id="page15"> 
+  
+  <!--Header Starts-->
+  <div data-theme="" data-role="header" data-position="fixed">
+    <div id="header" class="topinner"> <a href="#page14" data-transition="flip"> <span> <img src="images/icon3.png"  alt="background-icon"/> </span>
+      <h1>Entry Rates</h1>
+      </a> </div>
+    <div class="inner-logo"> <img src="images/logo-2.png"  alt="Logo"/> </div>
+  </div>
+  <!--Header Ends--> 
+  
+  <!--Page Content Starts-->
+  <div data-role="content" id="wrappermaind4" class="wrappermaindb" style="top:2px;">
+    <div class="scrollermain" style="margin-top:0px !important;" id="dkb_dhakbij">
+      <div class="col-xs-12">
+        <div class="events">
+          <h1>Ticket Rates</h1>
+          <table>
+            <tr>
+              <th></th>
+              <th> <span>Child</span> <br />
+                3'3 &amp; 4'6" </th>
+              <th> <span>Adult</span> <br />
+                Above 4'6" </th>
+              <th> <span>Sr. Citizen</span> <br />
+                Above 60 years </th>
+            </tr>
+            <tr>
+              <td> EsselWorld </td>
+              <td><strong class="WebRupee">Rs.</strong>490</td>
+              <td><strong class="WebRupee">Rs.</strong>790</td>
+              <td><strong class="WebRupee">Rs.</strong>290</td>
+            </tr>
+            <tr>
+              <td> Water Kingdom </td>
+              <td><strong class="WebRupee">Rs.</strong>590</td>
+              <td><strong class="WebRupee">Rs.</strong>890</td>
+              <td><strong class="WebRupee">Rs.</strong>290</td>
+            </tr>
+            <tr>
+              <td>Combine<br>
+                <strong> (Esselworld + <br>
+                Water Kingdom) </strong></td>
+              <td><strong class="WebRupee">Rs.</strong>750</td>
+              <td><strong class="WebRupee">Rs.</strong>1190</td>
+              <td><strong class="WebRupee">Rs.</strong>390</td>
+            </tr>
+            <tr>
+              <td>Passport Next <br />
+Annual Pass</td>
+              <td><strong class="WebRupee">Rs.</strong>990</td>
+              <td><strong class="WebRupee">Rs.</strong>1290</td>
+              <td>&nbsp;</td>
+            </tr>
+          </table>
+          <h3>HURRY! Children below height 3'3" get FREE entry!</h3>
+          <hr>
+          <h2>Annual Pass</h2>
+          <img src="images/anual-pass.jpg"  alt=""/>
+          <div class="disclaimer"><strong>Disclaimer</strong> - Prices subject to change without prior notice</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Page Content Starts--> 
+  
+  <!--Footer Starts-->
+  <div data-theme="a" data-role="footer" data-position="fixed">
+    <div class="outerwrapdkb footerbg">
+      <div class="col-xs-2"> <a href="#" onclick="oncheck1();"><img src="images/footer-fb.png" alt="fb"/></a></div>
+      <div class="col-xs-10"><a href="#" onclick="oncheck();"><img src="images/footer-but.png" alt="Button"/></a></div>
+    </div>
+  </div>
+  <!--Footer Ends--> 
+  
+</div>
+
+<!--- Page15 Ends Trip Planning Sub Pages 1  --> 
+
+<!--- Page16 Starts FAQ  -->
+<div data-role="page" id="page16"> 
+  
+  <!--Header Starts-->
+  <div data-theme="" data-role="header" data-position="fixed">
+    <div id="header" class="topinner"> <a href="#page14" data-transition="flip"> <span> <img src="images/icon3.png"  alt="background-icon"/> </span>
+      <h1>FAQ</h1>
+      </a> </div>
+    <div class="inner-logo"> <img src="images/logo-2.png"  alt="Logo"/> </div>
+  </div>
+  <!--Header Ends--> 
+  
+  <!--Page Content Starts-->
+  <div data-role="content">
+    <div class="col-xs-12">
+      <div class="events"> 
+        <!--<div class="search">
+          <input type="text" placeholder="Search here" value="">
+          <input type="image" src="images/icon2.jpg">
+          <div class="clear"></div>
+        </div>-->
+        <p>&nbsp;</p>
+        <ul class="accordion" id="accordion-1">
+          <li class="dcjq-current-parent"> <a href="#">WHAT ARE THE TIMINGS OF THE PARK? </a>
+            <ul>
+              <li> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. <br />
+                <br />
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore </li>
+            </ul>
+          </li>
+          <li> <a href="#">WHY CHILDREN ARE NOT ALLOWED ON ZYCLONE RIDE? </a>
+            <ul>
+              <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. </li>
+            </ul>
+          </li>
+          <li> <a href="#">HOW MANY THRILL RIDES ARE THERE IN YOUR PARK? </a>
+            <ul>
+              <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. </li>
+            </ul>
+          </li>
+          <li> <a href="#">WHY SELF-DRIVING IS NOT ALLOWED TO THE GUEST BELOW 4’ 6” HEIGHT AT SR. DODGEM ? </a>
+            <ul>
+              <li> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. <br />
+                <br />
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore </li>
+            </ul>
+          </li>
+          <li> <a href="#">WHY GUESTS ARE NOT RECOMMENDED TO SEAT ON CIRCULAR MOTION RIDES LIKE MONSTER, THUNDER, ROCK N ROLL, ETC. AFTER LUNCH / SNACKS? </a>
+            <ul>
+              <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore. </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!--Page Content Starts--> 
+  
+  <!--Footer Starts-->
+  <div data-theme="a" data-role="footer" data-position="fixed">
+    <div class="outerwrapdkb footerbg">
+      <div class="col-xs-2"> <a href="#" onclick="oncheck1();"><img src="images/footer-fb.png" alt="fb"/></a></div>
+      <div class="col-xs-10"><a href="#" onclick="oncheck();"><img src="images/footer-but.png" alt="Button"/></a></div>
+    </div>
+  </div>
+  <!--Footer Ends--> 
+  
+</div>
+
+<!--- Page16 Ends FAQ  --> 
+
+<!--- Page17 Starts How To Reach Page  -->
+<div data-role="page" id="page17"> 
+  
+  <!--Header Starts-->
+  <div data-theme="" data-role="header" data-position="fixed">
+    <div id="header" class="topinner"> <a href="#page14" data-transition="flip"> <span> <img src="images/icon3.png"  alt="background-icon"/> </span>
+      <h1>How To Reach</h1>
+      </a> </div>
+    <div class="inner-logo"> <img src="images/logo-2.png"  alt="Logo"/> </div>
+  </div>
+  <!--Header Ends--> 
+  
+  <!--Page Content Starts-->
+  <div data-role="content" class="reach-home wrappermaindb" id="wrappermaind5" >
+    <div class="scrollermain"> </div>
+  </div>
+  <!--Page Content Starts--> 
+  
+  <!--Footer Starts-->
+  <div data-theme="a" data-role="footer" data-position="fixed">
+    <div class="col-xs-12 menu">
+      <ul>
+        <li> <a href="#page18" style="color: #383939 !important;"> By Road <span><img src="images/icon4.png"  alt=""/></span> </a> </li>
+        <li> <a href="#page19" style="color: #383939 !important;"> By Train <span><img src="images/icon4.png"  alt=""/></span> </a> </li>
+        <li> <a href="#page20" style="color: #383939 !important;"> By Ferry <span><img src="images/icon4.png"  alt=""/></span> </a> </li>
+       <!--  <li> <a href="#" style="color: #383939 !important;">Google Map <span><img src="images/icon4.png"  alt=""/></span> </a> </li> -->
+      </ul>
+    </div>
+    <div class="outerwrapdkb footerbg">
+      <div class="col-xs-2"> <a href="#" onclick="oncheck1();"><img src="images/footer-fb.png" alt="fb"/></a></div>
+      <div class="col-xs-10"><a href="#" onclick="oncheck();"><img src="images/footer-but.png" alt="Button"/></a></div>
+    </div>
+  </div>
+  <!--Footer Ends--> 
+  
+</div>
+
+<!--- Page17 Ends How To Reach Page  --> 
+
+<!--- Page18 Starts How To Reach Sub Page 1  -->
+<div data-role="page" id="page18"> 
+  
+  <!--Header Starts-->
+  <div data-theme="" data-role="header" data-position="fixed">
+    <div id="header" class="topinner"> <a href="#page17" data-transition="flip"> <span> <img src="images/icon3.png"  alt="background-icon"/> </span>
+      <h1>How To Reach</h1>
+      </a> </div>
+    <div class="inner-logo"> <img src="images/logo-2.png"  alt="Logo"/> </div>
+  </div>
+  <!--Header Ends--> 
+  
+  <!--Page Content Starts-->
+  <div data-role="content">
+    <div class="col-xs-12">
+      <div class="events">
+        <h1>By Road </h1>
+        <hr />
+        <ul class="htr">
+          <li> Coming by car from Mumbai, take the Western Express Highway, turn left to Kashimira and drive down to Mira-Bhayander road. Our signages will guide you to the parks.
+            MBBT Bus no. 4 from Bhayander bus depot takes you directly to our parks.<br />
+            <br />
+            <!-- <div class="viewdiv"> <a href="#" class="view">View Google Map</a> </div> -->
+          </li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+  <!--Page Content Starts--> 
+  
+  <!--Footer Starts-->
+  <div data-theme="a" data-role="footer" data-position="fixed">
+    <div class="outerwrapdkb footerbg">
+      <div class="col-xs-2"> <a href="#" onclick="oncheck1();"><img src="images/footer-fb.png" alt="fb"/></a></div>
+      <div class="col-xs-10"><a href="#" onclick="oncheck();"><img src="images/footer-but.png" alt="Button"/></a></div>
+    </div>
+  </div>
+  <!--Footer Ends--> 
+  
+</div>
+
+<!--- Page18 Ends How To Reach Sub Page 1 --> 
+
+<!--- Page19 Starts How To Reach Sub Page 2  -->
+<div data-role="page" id="page19"> 
+  
+  <!--Header Starts-->
+  <div data-theme="" data-role="header" data-position="fixed">
+    <div id="header" class="topinner"> <a href="#page17" data-transition="flip"> <span> <img src="images/icon3.png"  alt="background-icon"/> </span>
+      <h1>How To Reach</h1>
+      </a> </div>
+    <div class="inner-logo"> <img src="images/logo-2.png"  alt="Logo"/> </div>
+  </div>
+  <!--Header Ends--> 
+  
+  <!--Page Content Starts-->
+  <div data-role="content">
+    <div class="col-xs-12">
+      <div class="events">
+        <h1>By Train</h1>
+        <hr />
+        <ul class="htr">
+          <li>Take a train on the western line to Malad or Borivali station. From Malad (w), take BEST bus no. 272 or an auto rickshaw to Marve beach. From Borivali station (w), take BEST bus no. 294 or an auto rickshaw to Gorai creek. </li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+  <!--Page Content Starts--> 
+  
+  <!--Footer Starts-->
+  <div data-theme="a" data-role="footer" data-position="fixed">
+    <div class="outerwrapdkb footerbg">
+      <div class="col-xs-2"> <a href="#" onclick="oncheck1();"><img src="images/footer-fb.png" alt="fb"/></a></div>
+      <div class="col-xs-10"><a href="#" onclick="oncheck();"><img src="images/footer-but.png" alt="Button"/></a></div>
+    </div>
+  </div>
+  <!--Footer Ends--> 
+  
+</div>
+
+<!--- Page19 Ends How To Reach Sub Page 2 --> 
+
+<!--- Page20 Starts How To Reach Sub Page 3  -->
+<div data-role="page" id="page20"> 
+  
+  <!--Header Starts-->
+  <div data-theme="" data-role="header" data-position="fixed">
+    <div id="header" class="topinner"> <a href="#page17" data-transition="flip"> <span> <img src="images/icon3.png"  alt="background-icon"/> </span>
+      <h1>How To Reach</h1>
+      </a> </div>
+    <div class="inner-logo"> <img src="images/logo-2.png"  alt="Logo"/> </div>
+  </div>
+  <!--Header Ends--> 
+  
+  <!--Page Content Starts-->
+  <div data-role="content">
+    <div class="col-xs-12">
+      <div class="events">
+        <h1>By Ferry</h1>
+        <hr />
+        <ul class="htr">
+          <li>From Marve beach/ Gorai creek, Esselworld's own ferries are available to take you to the park. </li>
+          <li> Ferries are available every 15 minutes from Gorai creek and every 45 minutes from Marve beach. Ferries will be available till the last guests leaves the park. </li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+  <!--Page Content Starts--> 
+  
+  <!--Footer Starts-->
+  <div data-theme="a" data-role="footer" data-position="fixed">
+    <div class="disclaimer"><strong>Disclaimer</strong> - Ferries will be available till the last guests leaves the park</div>
+    <div class="outerwrapdkb footerbg">
+      <div class="col-xs-2"> <a href="#" onclick="oncheck1();"><img src="images/footer-fb.png" alt="fb"/></a></div>
+      <div class="col-xs-10"><a href="#" onclick="oncheck();"><img src="images/footer-but.png" alt="Button"/></a></div>
+    </div>
+  </div>
+  <!--Footer Ends--> 
+  
+</div>
+
+<!--- Page20 Ends How To Reach Sub Page 3 --> 
+
+<!--- Page21 Starts Packages and Offers Page  -->
+<div data-role="page" id="page21" class="innerpages"> 
+  
+  <!--Header Starts-->
+  <div data-theme="" data-role="header" data-position="fixed">
+    <div id="header" class="topinner"> <a href="#page2" data-transition="flip"> <span> <img src="images/icon3.png"  alt="background-icon"/> </span>
+      <h1>Packages & Offers</h1>
+      </a> </div>
+    <div class="inner-logo"> <img src="images/logo-2.png"  alt="Logo"/> </div>
+  </div>
+  <!--Header Ends--> 
+  
+  <!--Page Content Starts-->
+  <div data-role="content" class="trip-planning wrappermaindb" id="wrappermaind6">
+    <div class="disclaimer2"><strong>Disclaimer</strong> - <br />Internet connection required to view the latest offers.</div>
+   
+  </div>
+  <!--Page Content Starts--> 
+  
+  <!--Footer Starts-->
+  <div data-theme="a" data-role="footer" data-position="fixed">
+     <div class="col-xs-12 menu" data-iscroll="">
+      <ul id="listoffers" data-role="listview"></ul>
+    </div>
+    <div class="outerwrapdkb footerbg">
+      <div class="col-xs-2"> <a href="#" onclick="oncheck1();"><img src="images/footer-fb.png" alt="fb"/></a></div>
+      <div class="col-xs-10"><a href="#" onclick="oncheck();"><img src="images/footer-but.png" alt="Button"/></a></div>
+    </div>
+  </div>
+  <!--Footer Ends--> 
+  
+</div>
+
+<!--- Page21 Ends Packages and Offers Page  --> 
+
+<!--- Page22 Starts Packages and Offers Sub Pages 1  -->
+<div data-role="page" id="page22"> 
+  
+  <!--Header Starts-->
+  <div data-theme="" data-role="header" data-position="fixed">
+    <div id="header" class="topinner"> <a href="#page21" data-transition="flip"> <span> <img src="images/icon3.png"  alt="background-icon"/> </span>
+      <div id="eachoffersd"></div>
+      </a> </div>
+    <div class="inner-logo"> <img src="images/logo-2.png"  alt="Logo"/> </div>
+  </div>
+  <!--Header Ends--> 
+  
+  <!--Page Content Starts-->
+  <div data-role="content" id="wrappermaind2" class="wrappermaindb" style="top:2px;">
+    <div class="scrollermain" style="margin-top:0px !important;" id="dkb_db">
+      <div class="col-xs-12">
+        <div class="events">
+        		<div id="eachoffers"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Page Content Starts--> 
+  
+  <!--Footer Starts-->
+  <div data-theme="a" data-role="footer" data-position="fixed">
+    <div class="outerwrapdkb footerbg">
+      <div class="col-xs-2"> <a href="#" onclick="oncheck1();"><img src="images/footer-fb.png" alt="fb"/></a></div>
+      <div class="col-xs-10"><a href="#" onclick="oncheck();"><img src="images/footer-but.png" alt="Button"/></a></div>
+    </div>
+  </div>
+  <!--Footer Ends--> 
+  
+</div>
+
+<!--- Page22 Ends Packages and Offers Sub Pages 1  --> 
+
+<!--- Page23 Starts Packages and Offers Sub Pages 2  -->
+<div data-role="page" id="page23"> 
+  
+  <!--Header Starts-->
+  <div data-theme="" data-role="header" data-position="fixed">
+    <div id="header" class="topinner"> <a href="#page21" data-transition="flip"> <span> <img src="images/icon3.png"  alt="background-icon"/> </span>
+      <h1>Passport Next Annual Pass</h1>
+      </a> </div>
+    <div class="inner-logo"> <img src="images/logo-2.png"  alt="Logo"/> </div>
+  </div>
+  <!--Header Ends--> 
+  
+  <!--Page Content Starts-->
+  <div data-role="content">
+    <div class="col-xs-12">
+      <div class="events">
+        <h1>Passport Next Annual Pass </h1>
+        <p> <img src="images/packgeandoffers-img4.jpg"  alt=""/></p>
+        <p>An annual pass to EsselWorld or Water Kingdom, any combination of your choice. 3 visits in a year for just <strong class="WebRupee">Rs.</strong>1190. Price point now is <strong class="WebRupee">Rs.</strong> 1290 (adult) and <strong class="WebRupee">Rs.</strong> 990 (child).  It's a steal-deal to the Island of Fun. Prices subject to change without prior notice.</p>
+      </div>
+    </div>
+  </div>
+  <!--Page Content Starts--> 
+  
+  <!--Footer Starts-->
+  <div data-theme="a" data-role="footer" data-position="fixed">
+    <div class="disclaimer"><strong>Disclaimer</strong> - Price subject to change</div>
+    <div class="outerwrapdkb footerbg">
+      <div class="col-xs-2"> <a href="#" onclick="oncheck1();"><img src="images/footer-fb.png" alt="fb"/></a></div>
+      <div class="col-xs-10"><a href="#" onclick="oncheck();"><img src="images/footer-but.png" alt="Button"/></a></div>
+    </div>
+  </div>
+  <!--Footer Ends--> 
+  
+</div>
+
+<!--- Page23 Ends Packages and Offers Sub Pages 2  --> 
+
+<!--- Page24 Starts Packages and Offers Sub Pages 3  -->
+<div data-role="page" id="page24"> 
+  
+  <!--Header Starts-->
+  <div data-theme="" data-role="header" data-position="fixed">
+    <div id="header" class="topinner"> <a href="#page21" data-transition="flip"> <span> <img src="images/icon3.png"  alt="background-icon"/> </span>
+      <h1>Combined Ticket</h1>
+      </a> </div>
+    <div class="inner-logo"> <img src="images/logo-2.png"  alt="Logo"/> </div>
+  </div>
+  <!--Header Ends--> 
+  
+  <!--Page Content Starts-->
+  <div data-role="content">
+    <div class="col-xs-12">
+      <div class="events">
+        <h1>Combined Ticket </h1>
+        <p> <img src="images/packgeandoffers-img2.jpg"  alt=""/></p>
+        <p>Enjoy the best of both parks in a single day with this great value saver product at price of <strong class="WebRupee">Rs.</strong>790 for children, <strong class="WebRupee">Rs.</strong> 390 (senior citizen) & <strong class="WebRupee">Rs.</strong>1190 for adults. Prices subject to change without prior notice. </p>
+      </div>
+    </div>
+  </div>
+  <!--Page Content Starts--> 
+  
+  <!--Footer Starts-->
+  <div data-theme="a" data-role="footer" data-position="fixed">
+    <div class="disclaimer"><strong>Disclaimer</strong> - Price subject to change</div>
+    <div class="outerwrapdkb footerbg">
+      <div class="col-xs-2"> <a href="#" onclick="oncheck1();"><img src="images/footer-fb.png" alt="fb"/></a></div>
+      <div class="col-xs-10"><a href="#" onclick="oncheck();"><img src="images/footer-but.png" alt="Button"/></a></div>
+    </div>
+  </div>
+  <!--Footer Ends--> 
+  
+</div>
+
+<!--- Page24 Ends Packages and Offers Sub Pages 3  --> 
+
+<!--- Page25 Starts Packages and Offers Sub Pages 4  -->
+<div data-role="page" id="page25"> 
+  
+  <!--Header Starts-->
+  <div data-theme="" data-role="header" data-position="fixed">
+    <div id="header" class="topinner"> <a href="#page21" data-transition="flip"> <span> <img src="images/icon3.png"  alt="background-icon"/> </span>
+      <h1>Online Discounts</h1>
+      </a> </div>
+    <div class="inner-logo"> <img src="images/logo-2.png"  alt="Logo"/> </div>
+  </div>
+  <!--Header Ends--> 
+  
+  <!--Page Content Starts-->
+  <div data-role="content">
+    <div class="col-xs-12">
+      <div class="events">
+        <h1>Online Discounts </h1>
+        <p> <img src="images/packgeandoffers-img1.jpg"  alt=""/></p>
+        <p>Now, enjoy discounts on online bookings on our website across F&B, Merchandise, Paid Attrations. Go on, use the power of internet!</p>
+      </div>
+    </div>
+  </div>
+  <!--Page Content Starts--> 
+  
+  <!--Footer Starts-->
+  <div data-theme="a" data-role="footer" data-position="fixed">
+    <div class="outerwrapdkb footerbg">
+      <div class="col-xs-2"> <a href="#" onclick="oncheck1();"><img src="images/footer-fb.png" alt="fb"/></a></div>
+      <div class="col-xs-10"><a href="#" onclick="oncheck();"><img src="images/footer-but.png" alt="Button"/></a></div>
+    </div>
+  </div>
+  <!--Footer Ends--> 
+  
+</div>
+
+<!--- Page25 Ends Packages and Offers Sub Pages 4  --> 
+
+<!--- Page26 Starts Packages and Offers Sub Pages 5  -->
+<div data-role="page" id="page26"> 
+  
+  <!--Header Starts-->
+  <div data-theme="" data-role="header" data-position="fixed">
+    <div id="header" class="topinner"> <a href="#page21" data-transition="flip"> <span> <img src="images/icon3.png"  alt="background-icon"/> </span>
+      <h1>Yes Bank Members</h1>
+      </a> </div>
+    <div class="inner-logo"> <img src="images/logo-2.png"  alt="Logo"/> </div>
+  </div>
+  <!--Header Ends--> 
+  
+  <!--Page Content Starts-->
+  <div data-role="content">
+    <div class="col-xs-12">
+      <div class="events">
+        <h1>Yes Bank Members</h1>
+        <p> <img src="images/packgeandoffers-img3.jpg"  alt=""/></p>
+        <p>Special discounts with your Yes Bank Debit Card. 40% off on online booking and 20% off on tickets bought at the parks. TnCs apply.</p>
+      </div>
+    </div>
+  </div>
+  <!--Page Content Starts--> 
+  
+  <!--Footer Starts-->
+  <div data-theme="a" data-role="footer" data-position="fixed">
+    <div class="outerwrapdkb footerbg">
+      <div class="col-xs-2"> <a href="#" onclick="oncheck1();"><img src="images/footer-fb.png" alt="fb"/></a></div>
+      <div class="col-xs-10"><a href="#" onclick="oncheck();"><img src="images/footer-but.png" alt="Button"/></a></div>
+    </div>
+  </div>
+  <!--Footer Ends--> 
+  
+</div>
+
+<!--- Page26 Ends Packages and Offers Sub Pages 5  --> 
+
+<!--- Page27 Starts Packages and Offers Sub Pages 6  -->
+<div data-role="page" id="page27"> 
+  
+  <!--Header Starts-->
+  <div data-theme="" data-role="header" data-position="fixed">
+    <div id="header" class="topinner"> <a href="#page21" data-transition="flip"> <span> <img src="images/icon3.png"  alt="background-icon"/> </span>
+      <h1>Special Wednesday</h1>
+      </a> </div>
+    <div class="inner-logo"> <img src="images/logo-2.png"  alt="Logo"/> </div>
+  </div>
+  <!--Header Ends--> 
+  
+  <!--Page Content Starts-->
+  <div data-role="content">
+    <div class="col-xs-12">
+      <div class="events">
+        <h1>Special Wednesday</h1>
+        <p> <img src="images/packgeandoffers-img5.jpg"  alt=""/></p>
+        <p>Wednesdays at EsselWorld & Water Kingdom are a perfect mid-week get away to destress from mundane routines. Your ticket is for <strong class="WebRupee">Rs.</strong>590 which includes  Food + Paid Attractions worth <strong class="WebRupee">Rs.</strong>890,  a saving of <strong class="WebRupee">Rs.</strong>300. Available only on our websites. Prices subject to change without prior notice. </p>
+      </div>
+    </div>
+  </div>
+  <!--Page Content Starts--> 
+  
+  <!--Footer Starts-->
+  <div data-theme="a" data-role="footer" data-position="fixed">
+    <div class="disclaimer"><strong>Disclaimer</strong> - Price subject to change</div>
+    <div class="outerwrapdkb footerbg">
+      <div class="col-xs-2"> <a href="#" onclick="oncheck1();"><img src="images/footer-fb.png" alt="fb"/></a></div>
+      <div class="col-xs-10"><a href="#" onclick="oncheck();"><img src="images/footer-but.png" alt="Button"/></a></div>
+    </div>
+  </div>
+  <!--Footer Ends--> 
+  
+</div>
+
+<!--- Page27 Ends Packages and Offers Sub Pages 6  --> 
+
+<!--- Page27a Starts Packages and Offers Sub Pages 6  -->
+<div data-role="page" id="page27a"> 
+  
+  <!--Header Starts-->
+  <div data-theme="" data-role="header" data-position="fixed">
+    <div id="header" class="topinner"> <a href="#page21" data-transition="flip"> <span> <img src="images/icon3.png"  alt="background-icon"/> </span>
+      <h1>Loop Mobile Offer</h1>
+      </a> </div>
+    <div class="inner-logo"> <img src="images/logo-2.png"  alt="Logo"/> </div>
+  </div>
+  <!--Header Ends--> 
+  
+  <!--Page Content Starts-->
+  <div data-role="content">
+    <div class="col-xs-12">
+      <div class="events">
+        <h1>Loop Mobile Offer</h1>
+        <p> <img src="images/packgeandoffers-img6.jpg"  alt=""/></p>
+        <p>Buy One Get One Ticket Free on per connection with I'm Special offer at EsselWorld or Water Kingdom. I'm Special offer can be availed only on Saturdays and Sundays. T&Cs apply. </p>
+      </div>
+    </div>
+  </div>
+  <!--Page Content Starts--> 
+  
+  <!--Footer Starts-->
+  <div data-theme="a" data-role="footer" data-position="fixed">
+    <div class="outerwrapdkb footerbg">
+      <div class="col-xs-2"> <a href="#" onclick="oncheck1();"><img src="images/footer-fb.png" alt="fb"/></a></div>
+      <div class="col-xs-10"><a href="#" onclick="oncheck();"><img src="images/footer-but.png" alt="Button"/></a></div>
+    </div>
+  </div>
+  <!--Footer Ends--> 
+  
+</div>
+
+<!--- Page27a Ends Packages and Offers Sub Pages 6  --> 
+
+<!--- Page28 Starts Restaurants Page  -->
+<div data-role="page" id="page28"> 
+  
+  <!--Header Starts-->
+  <div data-theme="" data-role="header" data-position="fixed">
+    <div id="header" class="topinner"> <a href="#page2" data-transition="flip"> <span> <img src="images/icon3.png"  alt="background-icon"/> </span>
+      <h1>Restaurants</h1>
+      </a> </div>
+    <div class="inner-logo"> <img src="images/logo-2.png"  alt="Logo"/> </div>
+  </div>
+  <!--Header Ends--> 
+  
+  <!--Page Content Starts-->
+  <div data-role="content">
+    <div class="col-xs-12">
+      <div class="events">
+        <div id="wrapperd" class="test_dkb">
+          <div id="scroller">
+            <ul id="thelist">
+              <li>
+                <h1>Happy Singh Da Dhaba </h1>
+                <p><img src="images/res-img4.jpg"  alt=""/></p>
+                <p>A Punjabi speciality restaurant to fill your stomach with joy. No one walks out sad from Happy Singh Da Dhaba.</p>
+                <div class="small-text">Location: Opp. Sr. Dodgem (dashing cars)</div>
+              </li>
+              <li>
+                <h1>Southern Treat</h1>
+                <p><img src="images/res-img6.jpg"  alt=""/></p>
+                <p>A treat for the people who love South Indian cuisine. Idlis and Vadas will be just perfect for a quick bite at EsselWorld. </p>
+                <div class="small-text">Location: Next to Monsters in the Mist</div>
+              </li>
+              <li>
+                <h1>Taipan </h1>
+                <p><img src="images/res-img9.jpg"  alt=""/></p>
+                <p>One of the foodie favorites. Treat yourself to some sizzling Chinese food.</p>
+                <div class="small-text">Location: Near Aqua Dive</div>
+              </li>
+              <li>
+                <h1>Ohh! Mumbai </h1>
+                <p><img src="images/res-img8.jpg"  alt=""/></p>
+                <p>We love the Mumbaiya cuisine! Vada Pav, Misal pav, Pav bhajji etc. Explore the tangy tastes of Mumbai.</p>
+                <div class="small-text">Location: Opp. Central Roundabout Garden</div>
+              </li>
+              <li>
+                <h1>Petu's </h1>
+                <p><img src="images/res-img5.jpg"  alt=""/></p>
+                <p>This one is for the Veggie lovers. Be a Petu, hog on a variety of vegetarian delicacies. </p>
+                <div class="small-text">Location: Opp. Arctic Circle</div>
+              </li>
+              <li>
+                <h1>Domino's Pizza </h1>
+                <p><img src="images/res-img3.jpg"  alt=""/></p>
+                <p>A pizza after a thrilling time will just make a perfect day for you. </p>
+                <div class="small-text">Location: Opp. Aqua Dive</div>
+              </li>
+              <li>
+                <h1>Mad Croc </h1>
+                <p><img src="images/res-img7.jpg"  alt=""/></p>
+                <p>Here's a drink to boost your energy levels. Sip-on and carry on the fun! </p>
+              </li>
+              <li>
+                <h1>Café Coffee day </h1>
+                <p><img src="Original/Facilities&Services/CafeCoffeeDay.jpg"  alt=""/></p>
+                <p>Hang out, relax and enjoy the fresh brewing coffee at café Coffee Day. </p>
+                <div class="small-text">Location: Next to Monsters</div>
+              </li>
+              <li>
+                <h1>Pastonji's Ice Cream </h1>
+                <p><img src="images/res-img1.jpg"  alt=""/></p>
+                <p>Everybody loves Ice Cream. Get a scoop of Pastonji's Ice Cream, a few chills between the thrills. </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Page Content Starts--> 
+  
+  <!--Footer Starts-->
+  <div data-theme="a" data-role="footer" data-position="fixed">
+    <div class="nav4">
+      <ul id="indicator4">
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+      </ul>
+    </div>
+    <div class="outerwrapdkb footerbg">
+      <div class="col-xs-2"> <a href="#" onclick="oncheck1();"><img src="images/footer-fb.png" alt="fb"/></a></div>
+      <div class="col-xs-10"><a href="#" onclick="oncheck();"><img src="images/footer-but.png" alt="Button"/></a></div>
+    </div>
+  </div>
+  <!--Footer Ends--> 
+</div>
+<!--- Page28 Ends Restaurants Page  --> 
+
+<!--- Page29 Starts Maps Page  -->
+<div data-role="page" id="page29"> 
+  
+  <!--Header Starts-->
+  <div data-theme="" data-role="header" data-position="fixed">
+    <div id="header" class="topinner"> <a href="#page2" data-transition="flip"> <span> <img src="images/icon3.png"  alt="background-icon"/> </span>
+      <h1>Maps</h1>
+      </a> </div>
+    <div class="inner-logo"> <img src="images/logo-2.png"  alt="Logo"/> </div>
+  </div>
+  <!--Header Ends--> 
+  
+  <!--Page Content Starts-->
+  <div data-role="content">
+  
+    <div id="wrappermap">
+      <div id="scrollermap"> <img src="images/map.jpg"  alt="" width="889" height="827" usemap="#Map"/>
+        <map name="Map">
+
+         <!--<a href="#65" data-rel="popup" data-transition="slideup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-gear ui-btn-icon-left ui-btn-a">
+         <area shape="circle" coords="697,57,16">
+         </a>-->
+         
+         <area href="#65" data-rel="popup" coords="697,57,16" shape="circle">
+        </map>
+        <!-- MAp area ends here --> 
+      </div>
+    </div>
+
+			<div data-role="popup" id="65" data-theme="d" style="position:absolute;">
+            <a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+              <h1>Helipad </h1>
+              <p> <img src="Original/Facilities&Services/Helipad.jpg" alt=""/></p>
+              <p>The Helicopter landing spot at EsselWorld. </p>
+            </div>
+    
+    
+    <!--Popups from the map end here --> 
+    <!-- ############################################################# --> 
+    
+  </div>
+  
+  <!--Page Content Starts--> 
+  
+  <!--Footer Starts-->
+  <div data-theme="a" data-role="footer" data-position="fixed">
+    <div class="outerwrapdkb footerbg">
+      <div class="col-xs-2"> <a href="#" onclick="oncheck1();"><img src="images/footer-fb.png" alt="fb"/></a></div>
+      <div class="col-xs-10"><a href="#" onclick="oncheck();"><img src="images/footer-but.png" alt="Button"/></a></div>
+    </div>
+  </div>
+  <!--Footer Ends--> 
+  			
+
+</div>
+
+<!--- Page29 Ends Maps Page  --> 
+
+<!--- facilities Starts Restaurants Page  -->
+<div data-role="page" id="facilities"> 
+  <!--Header Starts-->
+  <div data-theme="" data-role="header" data-position="fixed">
+    <div id="header" class="topinner"> <a href="#page29" data-transition="flip"> <span> <img src="images/icon3.png"  alt="background-icon"/> </span>
+      <h1>facilities and services </h1>
+      </a> </div>
+    <div class="inner-logo"> <img src="images/logo-2.png"  alt="Logo"/> </div>
+  </div>
+  <!--Header Ends--> 
+  
+  <!--Page Content Starts-->
+  <div data-role="content">
+    <div class="col-xs-12">
+      <div class="events">
+        <div id="wrapperfaci" class="test_dkb">
+          <div id="scroller6">
+            <ul id="thelist">
+              <li>
+                <h1>Witch Blood</h1>
+                <p> <img src="Original/Facilities&Services/Witch-Blood.jpg"  alt=""/></p>
+                <p>Every thing you need for your next Halloween party. If you love to spook your friends, do it right with scary masks, costumes and pranks. </p>
+              </li>
+              <li id="text1">
+                <h1>Andy's Mall </h1>
+                <p> <img src="Original/Facilities&Services/Andi's-Mall.jpg"  alt=""/></p>
+                <p>Shop across a range of merchandise featuring EsselWorld Fabulous 5 mascots. Buy all your essentials at Andy's Mall. </p>
+              </li>
+              <li>
+                <h1>Dada Dadi Corner </h1>
+                <p> <img src="Original/Facilities&Services/Dada-Dadi-Corner.jpg"  alt=""/></p>
+                <p>A peaceful place with beautiful gardens to catch your breath as you decide which adventure to take up next. </p>
+              </li>
+              <li>
+                <h1>Quick pik 1 </h1>
+                <p> <img src="Original/Facilities&Services/quick_pik_1.jpg"  alt=""/></p>
+                <p>A thrilling day at EsselWorld will be a tiring one as well. Grab your quick bites at Quick pik 1. </p>
+              </li>
+              <li>
+                <h1>Quick pik 2 </h1>
+                <p> <img src="Original/Facilities&Services/Quick_Pik_2.jpg"  alt=""/></p>
+                <p>Grab a pack of chips or a cola to quench your thirst and get back to fun at EsselWorld. </p>
+              </li>
+              <li>
+                <h1>Entrance </h1>
+                <p> <img src="Original/Facilities&Services/Entrance.jpg"  alt=""/></p>
+                <p>Gateway to your world of ultimate fun and thrill. Get in, 'It's your World'. </p>
+              </li>
+              <li>
+                <h1>Mom's Corner </h1>
+                <p> <img src="Original/Facilities&Services/MomsCorner.jpg"  alt=""/></p>
+                <p>Pamper your baby at Mom's Corner and have a fun day on your 'baby's day out'.</p>
+              </li>
+              <li>
+                <h1>Jetty Entrance </h1>
+                <p> <img src="Original/Facilities&Services/JettyEntrance.jpg"  alt=""/></p>
+                <p>Ferry drop-off point. Your first steps into the Island of Fun. </p>
+              </li>
+              <li>
+                <h1>Control Tower </h1>
+                <p> <img src="Original/Facilities&Services/ControlTower.jpg"  alt=""/></p>
+                <p>The control tower of the park. </p>
+              </li>
+              <li>
+                <h1>Ticketing Plaza </h1>
+                <p> <img src="Original/Facilities&Services/TicketingPlaza.jpg"  alt=""/></p>
+                <p>Buy your passes to a day of fun and excitement at the ticketing plaza. Spot it right after the main entrance. </p>
+              </li>
+              <li>
+                <h1>Cap Shap </h1>
+                <p> <img src="Original/Facilities&Services/Cap-shap.jpg"  alt=""/></p>
+                <p>Nothing stops you from having a lot of fun at EsselWorld. Not Even a hot day. Find the wacky hats at Cap Shap and keep enjoying. </p>
+              </li>
+              <li>
+                <h1>Helipad </h1>
+                <p> <img src="Original/Facilities&Services/Helipad.jpg"  alt=""/></p>
+                <p>The Helicopter landing spot at EsselWorld. </p>
+              </li>
+              <li>
+                <h1>Ice-Cream Parlour </h1>
+                <p> <img src="Original/Facilities&Services/Ice-cream-parlour-Pastonji.jpg"  alt=""/></p>
+                <p>The most common thing that everyone loves-  Ice-Cream! So Choco-chip or Vanilla? </p>
+              </li>
+              <li>
+                <h1>Resting Arena </h1>
+                <p> <img src="Original/Facilities&Services/Resting-Arena.jpg"  alt=""/></p>
+                <p>One spot of many to hang out and catch your fun. </p>
+              </li>
+              <li>
+                <h1>School Picnic Area </h1>
+                <p> <img src="Original/Facilities&Services/School-Picnic-Area.jpg"  alt=""/></p>
+                <p>The spot where you hang-out with your school buddies and cherish those moments for years to come. </p>
+              </li>
+              <li>
+                <h1>Andy's food Court </h1>
+                <p> <img src="Original/Facilities&Services/andy'sFood_320x480_1.jpg"  alt=""/></p>
+                <p>Munch on some lip smacking food at Andy's Food Court. Check out Andy's favorite dishes. </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Page Content Starts--> 
+  <!--Footer Starts-->
+  <div data-theme="a" data-role="footer" data-position="fixed">
+    <div class="nav">
+      <ul id="indicator6">
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+        <li>15</li>
+        <li>16</li>
+        <li>17</li>
+      </ul>
+    </div>
+    <div class="outerwrapdkb footerbg">
+      <div class="col-xs-2"> <a href="#" onclick="oncheck1();"><img src="images/footer-fb.png" alt="fb"/></a></div>
+      <div class="col-xs-10"><a href="#" onclick="oncheck();"><img src="images/footer-but.png" alt="Button"/></a></div>
+    </div>
+  </div>
+  <!--Footer Ends--> 
+</div>
+
+<!--- facilities  Ends Restaurants Page  -->
+
+ 
+
+
+  
+ <script>
+      // Initialize the Facebook SDK
+      document.addEventListener('deviceready', function() {
+		 
+          FB.init({
+              appId: '258820447624956',
+              nativeInterface: CDV.FB,
+              useCachedDialogs: false
+          });
+      
+          FB.getLoginStatus(handleStatusChange);
+      
+          authUser();
+          updateAuthElements();
+      });
+  </script>
+
+
+</body>
+</html>
