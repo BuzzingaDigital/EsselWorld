@@ -1,10 +1,10 @@
-var url="http://realmediaworks.com/EsselWorld/scripts.php";
+var url="http://m.esselworld.com/EsselWorld/scripts.php";
 
-var eventsimageurl="http://realmediaworks.com/EsselWorld/uploads/events/";
-var eventsthumbimageurl="http://realmediaworks.com/EsselWorld/uploads/events/thumbnailed/thumbnailed";
+var eventsimageurl="http://m.esselworld.com/EsselWorld/uploads/events/";
+var eventsthumbimageurl="http://m.esselworld.com/EsselWorld/uploads/events/thumbnailed/thumbnailed";
 
-var offersimageurl="http://realmediaworks.com/EsselWorld/uploads/offers/";
-var offersthumbimageurl="http://realmediaworks.com/EsselWorld/uploads/offers/thumbnailed/thumbnailed";
+var offersimageurl="http://m.esselworld.com/EsselWorld/uploads/offers/";
+var offersthumbimageurl="http://m.esselworld.com/EsselWorld/uploads/offers/thumbnailed/thumbnailed";
 
 function getevents(url,successfunction)
 { 
